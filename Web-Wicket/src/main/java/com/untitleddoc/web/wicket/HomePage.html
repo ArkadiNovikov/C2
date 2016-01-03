@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>C2</title>
+		<!--<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />-->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<style type="text/css">
+			body { padding-top: 80px; }
+		</style>
+
+		<!--[if lt IE 9]>
+		  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!--		<header>
+					<h1>Cadence Calc</h1>
+				</header>-->
+
+		<div class="container">
+			<div class="page-header">
+				<h1>C2</h1>
+				<p class="lead">a Cadence Calculator.</p>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<form class="form-horizontal" wicket:id="input">
+						<div class="form-group">
+							<h3>Crankset</h3>
+							<select class="form-control" name="Crankset" wicket:id="crankset">
+								<option>FC-9000</option>
+								<option>FC-6800</option>
+							</select>
+							<h3>Sprocket</h3>
+							<select class="form-control" name="Sprocket" wicket:id="sprocket">
+								<option></option>
+								<option></option>
+							</select>
+							<h3>Perimeter</h3>
+							<select class="form-control" name="Perimeter" wicket:id="perimeter">
+								<option></option>
+								<option></option>
+							</select>
+							<h3>Cadence</h3>
+							<input type="number" class="form-control" wicket:id="cadence">
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-6">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>1st</th>
+								<th>2nd</th>
+								<th>3nd</th>
+								<th>4th</th>
+								<th>5th</th>
+								<th>6th</th>
+								<th>7th</th>
+								<th>8th</th>
+								<th>9th</th>
+								<th>10th</th>
+								<th>1th</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Inner</th>
+								<td>1st</td>
+								<td>2nd</td>
+								<td>3nd</td>
+								<td>4th</td>
+								<td>5th</td>
+								<td>6th</td>
+								<td>7th</td>
+								<td>8th</td>
+								<td>9th</td>
+								<td>10th</td>
+								<td>11th</td>
+							</tr>
+							<tr>
+								<th>Middle</th>
+								<td>1st</td>
+								<td>2nd</td>
+								<td>3nd</td>
+								<td>4th</td>
+								<td>5th</td>
+								<td>6th</td>
+								<td>7th</td>
+								<td>8th</td>
+								<td>9th</td>
+								<td>10th</td>
+								<td>11th</td>
+							</tr>
+							<tr>
+								<th>Outer</th>
+								<td>1st</td>
+								<td>2nd</td>
+								<td>3nd</td>
+								<td>4th</td>
+								<td>5th</td>
+								<td>6th</td>
+								<td>7th</td>
+								<td>8th</td>
+								<td>9th</td>
+								<td>10th</td>
+								<td>11th</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
