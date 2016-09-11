@@ -1,15 +1,11 @@
 package com.untitleddoc.web.wicket;
 
-import com.untitleddoc.dataaccess.Crankset;
-import com.untitleddoc.dataaccess.CranksetJpaController;
-import com.untitleddoc.dataaccess.Perimeter;
-import com.untitleddoc.dataaccess.PerimeterJpaController;
-import com.untitleddoc.dataaccess.Sproket;
-import com.untitleddoc.dataaccess.SproketJpaController;
+import com.untitleddoc.cadencecalc.jaxrs.models.Crankset;
+import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter;
+import com.untitleddoc.cadencecalc.jaxrs.models.Sproket;
 import java.util.Arrays;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.form.OnChangeAjaxBehavior;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
@@ -23,107 +19,118 @@ import org.apache.wicket.model.Model;
 @Slf4j
 public class HomePage extends BasePage {
 
-	private static final long serialVersionUID = 1L;
-	private final DropDownChoice<Crankset> crankset;
-	private final DropDownChoice<Sproket> sprocket;
-	private final DropDownChoice<Perimeter> perimeter;
-	private final NumberTextField cadence = new NumberTextField("cadence", new Model<>(80));
-	private final Form<Void> form = new Form<Void>("input") {
-		@Override
-		protected void onSubmit() {
-			super.onSubmit(); //To change body of generated methods, choose Tools | Templates.
-		}
-	};
+    private static final long serialVersionUID = 1L;
+    private final DropDownChoice<Crankset> crankset;
+    private final DropDownChoice<Sproket> sprocket;
+    private final DropDownChoice<Perimeter> perimeter;
+    private final NumberTextField cadence = new NumberTextField("cadence", new Model<>(80));
+    private final DataForm form = new DataForm("input");
 
-	public HomePage(final PageParameters parameters) {
-		super(parameters);
+    private final List<Crankset> cranks;
+    private final List<Sproket> sprokets;
+    private final List<Perimeter> perimeters;
 
-		final CranksetJpaController crankCtrl = new CranksetJpaController(getEntityManagerFactory());
-		final List<Crankset> cranks = crankCtrl.findCranksetEntities();
+    private class DataForm extends Form<Void> {
 
-		final SproketJpaController sprCtrl = new SproketJpaController(getEntityManagerFactory());
-		final List<Sproket> sprokets = sprCtrl.findSproketEntities();
+        private static final long serialVersionUID = -7202353439631180225L;
 
-		final PerimeterJpaController periCtrl = new PerimeterJpaController(getEntityManagerFactory());
-		final List<Perimeter> perimeters = periCtrl.findPerimeterEntities();
+        public DataForm(String id) {
+            super(id);
+        }
 
-		crankset = new DropDownChoice<>("crankset", new Model<>(), cranks, new IChoiceRenderer<Crankset>() {
-			@Override
-			public Object getDisplayValue(Crankset object) {
-				String str = StringUtils.EMPTY;
-				str += object.getName();
-				str += " (" + object.getOuterGearTooth() + " - " + (object.getMiddleGearTooth() != null ? object.getMiddleGearTooth() + " - " : "") + object.getInnerGearTooth() + ")";
-				return str;
-			}
+        public DataForm(String id, IModel<Void> model) {
+            super(id, model);
+        }
+    }
 
-			@Override
-			public String getIdValue(Crankset arg0, int arg1) {
-				return arg0.getIdCrankset().toString();
-			}
+    public HomePage(final PageParameters parameters) {
+        super(parameters);
 
-			@Override
-			public Crankset getObject(String arg0, IModel<? extends List<? extends Crankset>> arg1) {
-				return arg1.getObject().stream().filter(periCtrl -> periCtrl.getIdCrankset().equals(Integer.valueOf(arg0))).findFirst().get();
-			}
+        final CranksetClient cranksetClient = new CranksetClient();
+        final SproketClient sproketClient = new SproketClient();
+        final PerimeterClient perimeterClient = new PerimeterClient();
 
-		});
-		
-		sprocket = new DropDownChoice<>("sprocket", new Model<>(), sprokets, new IChoiceRenderer<Sproket>() {
-			@Override
-			public Object getDisplayValue(Sproket object) {
-				String str = StringUtils.EMPTY;
-				str += object.getName();
-				str += " (";
-				str += object.getSproketdetailCollection().stream().min((a, b) -> Integer.compare(a.getSproketDetailPK().getToothIndex(), b.getSproketDetailPK().getToothIndex())).get().getTooth();
-				str += "-";
-				str += object.getSproketdetailCollection().stream().max((a, b) -> Integer.compare(a.getSproketDetailPK().getToothIndex(), b.getSproketDetailPK().getToothIndex())).get().getTooth();
-				str += ")";
-				return str;
-			}
+        cranks = cranksetClient.getCrankset();
+        sprokets = sproketClient.getSproket();
+        perimeters = perimeterClient.getPerimeter();
 
-			@Override
-			public String getIdValue(Sproket arg0, int arg1) {
-				return arg0.getIdSproket().toString();
-			}
+        crankset = new DropDownChoice<>("crankset", new Model<>(), cranks, new IChoiceRenderer<Crankset>() {
+            private static final long serialVersionUID = 1L;
 
-			@Override
-			public Sproket getObject(String arg0, IModel<? extends List<? extends Sproket>> arg1) {
-				return arg1.getObject().stream().filter(periCtrl -> periCtrl.getIdSproket().equals(Integer.valueOf(arg0))).findFirst().get();
-			}
+            @Override
+            public Object getDisplayValue(Crankset object) {
+                return object.getDisplayValue();
+            }
 
-		});
-		perimeter = new DropDownChoice<>("perimeter", new Model<>(), perimeters, new IChoiceRenderer<Perimeter>() {
-			@Override
-			public Object getDisplayValue(Perimeter object) {
-				return object.getEtrto() + " (" + object.getFrench() + ")";
-			}
+            @Override
+            public String getIdValue(Crankset arg0, int arg1) {
+                return arg0.getName() + "." + arg0.getOuterGearTooth() + "." + arg0.getMiddleGearTooth() + "." + arg0.getInnerGearTooth();
+            }
 
-			@Override
-			public String getIdValue(Perimeter arg0, int arg1) {
-				return arg0.getIdPerimeter().toString();
-			}
+            @Override
+            public Crankset getObject(String arg0, IModel<? extends List<? extends Crankset>> arg1) {
+                return arg1.getObject().stream().filter(periCtrl
+                        -> (periCtrl.getName() + "." + periCtrl.getOuterGearTooth() + "." + periCtrl.getMiddleGearTooth() + "." + periCtrl.getInnerGearTooth()).equals(arg0)).findFirst().get();
+            }
+        });
 
-			@Override
-			public Perimeter getObject(String arg0, IModel<? extends List<? extends Perimeter>> arg1) {
-				return arg1.getObject().stream().filter(periCtrl -> periCtrl.getIdPerimeter().equals(Integer.valueOf(arg0))).findFirst().get();
-			}
-		});
+        sprocket = new DropDownChoice<>("sprocket", new Model<>(), sprokets, new IChoiceRenderer<Sproket>() {
+            private static final long serialVersionUID = 1L;
 
-		final OnChangeAjaxBehavior behavior = new OnChangeAjaxBehavior() {
-			@Override
-			protected void onUpdate(AjaxRequestTarget target) {
-			}
-		};
+            @Override
+            public Object getDisplayValue(Sproket object) {
+                return object.getDisplayValue();
+            }
+
+            @Override
+            public String getIdValue(Sproket arg0, int arg1) {
+                return arg0.getName() + "." + arg0.getTooths().get(0) + "." + arg0.getTooths().get(arg0.getTooths().size() - 1);
+            }
+
+            @Override
+            public Sproket getObject(String arg0, IModel<? extends List<? extends Sproket>> arg1) {
+                return arg1.getObject().stream().filter(periCtrl
+                        -> (periCtrl.getName() + "." + periCtrl.getTooths().get(0) + "." + periCtrl.getTooths().get(periCtrl.getTooths().size())).equals(arg0)).findFirst().get();
+            }
+
+        });
+
+        perimeter = new DropDownChoice<>("perimeter", new Model<>(), perimeters, new IChoiceRenderer<Perimeter>() {
+            private static final long serialVersionUID = 1L;
+
+            @Override
+            public Object getDisplayValue(Perimeter object) {
+                return object.getDisplayValue();
+            }
+
+            @Override
+            public String getIdValue(Perimeter arg0, int arg1) {
+                return arg0.getEtrto();
+            }
+
+            @Override
+            public Perimeter getObject(String arg0, IModel<? extends List<? extends Perimeter>> arg1) {
+                return arg1.getObject().stream().filter(periCtrl -> periCtrl.getEtrto().equals(arg0)).findFirst().get();
+            }
+        });
+
+        final OnChangeAjaxBehavior behavior = new OnChangeAjaxBehavior() {
+            private static final long serialVersionUID = 1L;
+
+            @Override
+            protected void onUpdate(AjaxRequestTarget target) {
+            }
+        };
 
 //		crankset.add(behavior);
 //		sprocket.add(behavior);
 //		perimeter.add(behavior);
 //		cadence.add(behavior);
-		form.add(crankset);
-		form.add(sprocket);
-		form.add(perimeter);
-		form.add(cadence);
-		add(form);
+        form.add(crankset);
+        form.add(sprocket);
+        form.add(perimeter);
+        form.add(cadence);
+        add(form);
 
-	}
+    }
 }
