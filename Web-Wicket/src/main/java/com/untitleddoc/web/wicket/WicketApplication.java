@@ -15,29 +15,28 @@ import org.apache.wicket.protocol.http.WebApplication;
 @Slf4j
 public final class WicketApplication extends WebApplication {
 
-    private EntityManagerFactory entityManagerFactory;
+	/**
+	 * @return デフォルトページクラス
+	 * @see org.apache.wicket.Application#getHomePage()
+	 */
+	@Override
+	public Class<? extends WebPage> getHomePage() {
+		return HomePage.class;
+	}
 
-    /**
-     * @see org.apache.wicket.Application#getHomePage()
-     */
-    @Override
-    public Class<? extends WebPage> getHomePage() {
-        return HomePage.class;
-    }
+	/**
+	 * @see org.apache.wicket.Application#init()
+	 */
+	@Override
+	public void init() {
+		super.init();
 
-    /**
-     * @see org.apache.wicket.Application#init()
-     */
-    @Override
-    public void init() {
-        super.init();
+		//レスポンスのエンコーディング設定
+		getRequestCycleSettings().setResponseRequestEncoding("UTF-8");
+	}
 
-        //レスポンスのエンコーディング設定
-        getRequestCycleSettings().setResponseRequestEncoding("UTF-8");
-    }
-
-    @Override
-    public RuntimeConfigurationType getConfigurationType() {
-        return super.getConfigurationType();
-    }
+	@Override
+	public RuntimeConfigurationType getConfigurationType() {
+		return super.getConfigurationType();
+	}
 }

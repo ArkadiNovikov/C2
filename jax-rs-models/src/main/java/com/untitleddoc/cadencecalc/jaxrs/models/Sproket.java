@@ -8,6 +8,7 @@ package com.untitleddoc.cadencecalc.jaxrs.models;
 import java.io.Serializable;
 import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -16,6 +17,7 @@ import lombok.Data;
  */
 @XmlRootElement
 @Data
+@AllArgsConstructor
 public class Sproket implements Serializable {
 
     private static final long serialVersionUID = -6668484495934477324L;
@@ -26,13 +28,13 @@ public class Sproket implements Serializable {
     public Sproket() {
     }
 
-    public String getDisplayValue() {
+    public String displayValue() {
         String str = "";
         str += getName();
         str += " (";
-        str += getTooths().stream().min((a, b) -> Integer.compare(a, b)).get();
+        str += tooths.get(0);
         str += "-";
-        str += getTooths().stream().max((a, b) -> Integer.compare(a, b)).get();
+        str += tooths.get(tooths.size()-1);
         str += ")";
         return str;
     }

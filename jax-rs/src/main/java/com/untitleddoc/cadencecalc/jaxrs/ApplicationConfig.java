@@ -23,15 +23,14 @@ public class ApplicationConfig extends Application {
     }
 
     /**
-     * Do not modify addRestResourceClasses() method.
-     * It is automatically populated with
-     * all resources defined in the project.
-     * If required, comment out calling this method in getClasses().
+     * Do not modify addRestResourceClasses() method. It is automatically
+     * populated with all resources defined in the project. If required, comment
+     * out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(com.untitleddoc.cadencecalc.jaxrs.Crankset.class);
-        resources.add(com.untitleddoc.cadencecalc.jaxrs.Perimeter.class);
-        resources.add(com.untitleddoc.cadencecalc.jaxrs.Sproket.class);
+        resources.add(com.untitleddoc.cadencecalc.jaxrs.CranksetService.class);
+        resources.add(com.untitleddoc.cadencecalc.jaxrs.PerimeterService.class);
+        resources.add(com.untitleddoc.cadencecalc.jaxrs.SproketService.class);
     }
-    
+
 }

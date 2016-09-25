@@ -13,8 +13,8 @@
 		2) servlet specific <init-param> 
 		3) context specific <context-param>
 
-		The value might be either "development" (reloading when templates change) or 
-		"deployment". If no configuration is found, "development" is the default. -->
+	The value might be either "development" (reloading when templates change) or 
+	"deployment". If no configuration is found, "development" is the default. -->
 
 	<filter>
 		<filter-name>wicket.Web-Wicket</filter-name>

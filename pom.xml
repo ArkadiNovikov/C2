@@ -8,14 +8,13 @@
 	<packaging>pom</packaging>
 	<properties>
 		<jetty.version>9.3.7.v20160115</jetty.version>
-		<wicket.version>7.2.0</wicket.version>
+		<wicket.version>7.4.0</wicket.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<modules>
 		<module>Web-Wicket</module>
-		<module>DataAccess</module>
-    <module>jax-rs</module>
-	 <module>jax-rs-models</module>
+		<module>jax-rs</module>
+		<module>jax-rs-models</module>
 	</modules>
 	<repositories>
 		<repository>
@@ -38,12 +37,12 @@
 			<dependency>
 				<groupId>org.eclipse.persistence</groupId>
 				<artifactId>eclipselink</artifactId>
-				<version>2.6.2</version>
+				<version>2.6.3</version>
 			</dependency>
 			<dependency>
 				<groupId>org.eclipse.persistence</groupId>
 				<artifactId>javax.persistence</artifactId>
-				<version>2.1.0</version>
+				<version>2.1.1</version>
 			</dependency>
 			
 			<!-- Util Dep -->
@@ -71,12 +70,12 @@
 			<dependency>
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
-				<version>2.4</version>
+				<version>2.5</version>
 			</dependency>
 			<dependency>
 				<groupId>joda-time</groupId>
 				<artifactId>joda-time</artifactId>
-				<version>2.9.2</version>
+				<version>2.9.4</version>
 			</dependency>
 			
 			<!--  WICKET DEPENDENCIES -->
@@ -105,12 +104,12 @@
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
-				<version>1.7.19</version>
+				<version>1.7.21</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-nop</artifactId>
-				<version>1.7.19</version>
+				<version>1.7.21</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
@@ -120,27 +119,27 @@
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-jcl</artifactId>
-				<version>1.7.19</version>
+				<version>1.7.21</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>jcl-over-slf4j</artifactId>
-				<version>1.7.19</version>
+				<version>1.7.21</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>log4j-over-slf4j</artifactId>
-				<version>1.7.19</version>
+				<version>1.7.21</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>osgi-over-slf4j</artifactId>
-				<version>1.7.19</version>
+				<version>1.7.21</version>
 			</dependency>
 			<dependency>
 				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-classic</artifactId>
-				<version>1.1.6</version>
+				<version>1.1.7</version>
 			</dependency>
 
 			<!--  JUNIT DEPENDENCY FOR TESTING -->

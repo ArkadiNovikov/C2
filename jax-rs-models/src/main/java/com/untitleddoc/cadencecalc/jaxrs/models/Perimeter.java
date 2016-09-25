@@ -7,6 +7,7 @@ package com.untitleddoc.cadencecalc.jaxrs.models;
 
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlRootElement;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -15,10 +16,11 @@ import lombok.Data;
  */
 @XmlRootElement
 @Data
+@AllArgsConstructor
 public class Perimeter implements Serializable {
 
     private static final long serialVersionUID = 165573926447503641L;
-    
+
     private String etrto;
     private String french;
     private int perimeterValue;
@@ -26,9 +28,7 @@ public class Perimeter implements Serializable {
     public Perimeter() {
     }
 
-    public String getDisplayValue()
-    {
+    public String displayValue() {
         return getEtrto() + " (" + getFrench() + ")";
     }
-
 }
