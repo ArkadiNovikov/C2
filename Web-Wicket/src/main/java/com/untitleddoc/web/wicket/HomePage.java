@@ -175,9 +175,6 @@ public class HomePage extends BasePage
 		@Override
 		protected void onUpdate(final AjaxRequestTarget target)
 		{
-			final SpeedData cd = new SpeedData(modelCrank.getObject(), modelSproket.getObject(), modelPerimeter.getObject(), modelCadence.getObject());
-			final double[][] d = cd.getResult();
-
 			target.add(panelSpeedData);
 		}
 	}
