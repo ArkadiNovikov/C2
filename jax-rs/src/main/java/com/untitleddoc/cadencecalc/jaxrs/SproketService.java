@@ -6,9 +6,9 @@
 package com.untitleddoc.cadencecalc.jaxrs;
 
 import com.untitleddoc.cadencecalc.jaxrs.models.Sproket;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.ws.rs.GET;
@@ -34,6 +34,7 @@ public class SproketService
 			final Sproket item = new Sproket();
 			item.setName("CS-6800");
 			final List<Integer> tooths = Arrays.asList(11, 12, 13, 14, 16, 18, 19, 20, 22, 25, 32);
+			tooths.sort(Comparator.naturalOrder());
 			item.setTooths(tooths);
 			list.add(item);
 		}
@@ -41,6 +42,7 @@ public class SproketService
 			final Sproket item = new Sproket();
 			item.setName("CS-6800");
 			final List<Integer> tooths = Arrays.asList(11, 12, 13, 14, 15, 17, 19, 21, 23, 25, 28);
+			tooths.sort(Comparator.naturalOrder());
 			item.setTooths(tooths);
 			list.add(item);
 		}
@@ -48,6 +50,7 @@ public class SproketService
 			final Sproket item = new Sproket();
 			item.setName("CS-6700");
 			final List<Integer> tooths = Arrays.asList(11, 12, 13, 14, 15, 17, 19, 21, 24, 28);
+			tooths.sort(Comparator.naturalOrder());
 			item.setTooths(tooths);
 			list.add(item);
 		}
@@ -55,6 +58,7 @@ public class SproketService
 			final Sproket item = new Sproket();
 			item.setName("CS-4600");
 			final List<Integer> tooths = Arrays.asList(12, 13, 14, 15, 17, 19, 21, 24, 27, 30);
+			tooths.sort(Comparator.naturalOrder());
 			item.setTooths(tooths);
 			list.add(item);
 		}
@@ -62,6 +66,7 @@ public class SproketService
 			final Sproket item = new Sproket();
 			item.setName("CS-HG500-10");
 			final List<Integer> tooths = Arrays.asList(12, 13, 14, 15, 17, 19, 21, 23, 25, 28);
+			tooths.sort(Comparator.naturalOrder());
 			item.setTooths(tooths);
 			list.add(item);
 		}
@@ -69,6 +74,7 @@ public class SproketService
 			final Sproket item = new Sproket();
 			item.setName("CS-HG500-10");
 			final List<Integer> tooths = Arrays.asList(11, 12, 14, 16, 18, 20, 22, 25, 28, 32);
+			tooths.sort(Comparator.naturalOrder());
 			item.setTooths(tooths);
 			list.add(item);
 		}
@@ -76,6 +82,7 @@ public class SproketService
 			final Sproket item = new Sproket();
 			item.setName("CS-HG500-10");
 			final List<Integer> tooths = Arrays.asList(11, 13, 15, 17, 19, 21, 23, 26, 30, 34);
+			tooths.sort(Comparator.naturalOrder());
 			item.setTooths(tooths);
 			list.add(item);
 		}
@@ -83,6 +90,7 @@ public class SproketService
 			final Sproket item = new Sproket();
 			item.setName("CS-M9000");
 			final List<Integer> tooths = Arrays.asList(11, 13, 15, 17, 19, 21, 24, 27, 31, 35, 40);
+			tooths.sort(Comparator.naturalOrder());
 			item.setTooths(tooths);
 			list.add(item);
 		}

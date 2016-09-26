@@ -21,17 +21,13 @@ import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter;
 import com.untitleddoc.cadencecalc.jaxrs.models.Sproket;
 import java.util.AbstractMap;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import org.apache.commons.collections4.list.AbstractLinkedList;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.LoadableDetachableModel;
-import org.apache.wicket.model.Model;
 
 /**
  *
@@ -48,7 +44,7 @@ public final class SpeedDataPanel extends Panel
 	private final IModel<Integer> modelCadence;
 	private final IModel<ArrayList<Integer>> modelSproketTooths = new LoadableDetachableModel<ArrayList<Integer>>()
 	{
-		private static final long serialVersionUID = 1L;
+		private static final long serialVersionUID = SpeedDataPanel.serialVersionUID;
 
 		@Override
 		protected ArrayList<Integer> load()
@@ -56,9 +52,9 @@ public final class SpeedDataPanel extends Panel
 			return Lists.newArrayList(modelSproket.getObject().getTooths());
 		}
 	};
-	private final IModel< List<AbstractMap.SimpleEntry<Integer, List<Double>>>> modelDataTable = new LoadableDetachableModel<List<AbstractMap.SimpleEntry<Integer, List<Double>>>>()
+	private final IModel<List<AbstractMap.SimpleEntry<Integer, List<Double>>>> modelDataTable = new LoadableDetachableModel<List<AbstractMap.SimpleEntry<Integer, List<Double>>>>()
 	{
-		private static final long serialVersionUID = 1L;
+		private static final long serialVersionUID = SpeedDataPanel.serialVersionUID;
 
 		@Override
 		protected List<AbstractMap.SimpleEntry<Integer, List<Double>>> load()
@@ -71,7 +67,7 @@ public final class SpeedDataPanel extends Panel
 			{
 				final Integer key = modelCrank.getObject().getTooths().get(i);
 				final List<Double> value = new ArrayList<>(calcData[i].length);
-				for (double d : calcData[i])
+				for (final double d : calcData[i])
 				{
 					value.add(d);
 				}
@@ -97,7 +93,7 @@ public final class SpeedDataPanel extends Panel
 
 		headers = new ListView<Integer>("headers", modelSproketTooths)
 		{
-			private static final long serialVersionUID = 1L;
+			private static final long serialVersionUID = SpeedDataPanel.serialVersionUID;
 
 			@Override
 			protected void populateItem(final ListItem<Integer> item)
@@ -110,7 +106,7 @@ public final class SpeedDataPanel extends Panel
 
 		dataList = new ListView<AbstractMap.SimpleEntry<Integer, List<Double>>>("dataBodyRow", modelDataTable)
 		{
-			private static final long serialVersionUID = 1L;
+			private static final long serialVersionUID = SpeedDataPanel.serialVersionUID;
 
 			@Override
 			protected void populateItem(final ListItem<AbstractMap.SimpleEntry<Integer, List<Double>>> item)
@@ -120,7 +116,7 @@ public final class SpeedDataPanel extends Panel
 				item.add(new Label("dataBodyRowHeader", i.getKey()));
 				item.add(new ListView<Double>("dataBodyColum", i.getValue())
 				{
-					private static final long serialVersionUID = 1L;
+					private static final long serialVersionUID = SpeedDataPanel.serialVersionUID;
 
 					@Override
 					protected void populateItem(final ListItem<Double> item)

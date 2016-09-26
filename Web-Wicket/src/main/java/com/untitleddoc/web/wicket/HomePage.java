@@ -1,24 +1,16 @@
 package com.untitleddoc.web.wicket;
 
-import com.google.common.base.Function;
-import com.google.common.collect.Lists;
 import com.untitleddoc.cadencecalc.jaxrs.models.Crankset;
 import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter;
 import com.untitleddoc.cadencecalc.jaxrs.models.Sproket;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.form.OnChangeAjaxBehavior;
-import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.DropDownChoice;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.IChoiceRenderer;
 import org.apache.wicket.markup.html.form.NumberTextField;
-import org.apache.wicket.markup.html.list.ListItem;
-import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 
@@ -47,14 +39,14 @@ public class HomePage extends BasePage
 	private class DataForm extends Form<Void>
 	{
 
-		private static final long serialVersionUID = -7202353439631180225L;
+		private static final long serialVersionUID = HomePage.serialVersionUID;
 
-		public DataForm(String id)
+		public DataForm(final String id)
 		{
 			super(id);
 		}
 
-		public DataForm(String id, IModel<Void> model)
+		public DataForm(final String id, final IModel<Void> model)
 		{
 			super(id, model);
 		}
@@ -78,7 +70,7 @@ public class HomePage extends BasePage
 
 		inputDropDownCrankset = new DropDownChoice<>("crankset", modelCrank, cranks, new IChoiceRenderer<Crankset>()
 		{
-			private static final long serialVersionUID = 1L;
+			private static final long serialVersionUID = HomePage.serialVersionUID;
 
 			@Override
 			public Object getDisplayValue(Crankset object)
@@ -102,7 +94,7 @@ public class HomePage extends BasePage
 
 		inputDropDownSprocket = new DropDownChoice<>("sprocket", modelSproket, sprokets, new IChoiceRenderer<Sproket>()
 		{
-			private static final long serialVersionUID = 1L;
+			private static final long serialVersionUID = HomePage.serialVersionUID;
 
 			@Override
 			public Object getDisplayValue(Sproket object)
@@ -127,7 +119,7 @@ public class HomePage extends BasePage
 
 		inputDropDownPerimeter = new DropDownChoice<>("perimeter", modelPerimeter, perimeters, new IChoiceRenderer<Perimeter>()
 		{
-			private static final long serialVersionUID = 1L;
+			private static final long serialVersionUID = HomePage.serialVersionUID;
 
 			@Override
 			public Object getDisplayValue(Perimeter object)
@@ -170,7 +162,7 @@ public class HomePage extends BasePage
 	private final class OnChangeLocalBehavior extends OnChangeAjaxBehavior
 	{
 
-		private static final long serialVersionUID = 1L;
+		private static final long serialVersionUID = HomePage.serialVersionUID;
 
 		@Override
 		protected void onUpdate(final AjaxRequestTarget target)

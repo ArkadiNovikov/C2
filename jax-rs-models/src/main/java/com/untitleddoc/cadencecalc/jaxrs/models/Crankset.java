@@ -5,6 +5,7 @@
  */
 package com.untitleddoc.cadencecalc.jaxrs.models;
 
+import com.google.common.collect.Lists;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,10 +32,7 @@ public class Crankset implements Serializable {
 	}
 
     public String displayValue() {
-        List<String> stooths = new ArrayList<>();
-		tooths.stream().forEach((i) -> {
-			stooths.add(i.toString());
-		});
+        final List<String> stooths = Lists.transform(tooths, String::valueOf);
         return getName() + " (" + String.join("-", stooths) + ")";
     }
 }
