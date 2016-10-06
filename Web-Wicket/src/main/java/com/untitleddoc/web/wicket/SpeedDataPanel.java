@@ -59,7 +59,7 @@ public final class SpeedDataPanel extends Panel
 		@Override
 		protected List<AbstractMap.SimpleEntry<Integer, List<Double>>> load()
 		{
-			final SpeedData data = new SpeedData(modelCrank.getObject(), modelSproket.getObject(), modelPerimeter.getObject(), modelCadence.getObject());
+			final SpeedDataCalc data = new SpeedDataCalc(modelCrank.getObject(), modelSproket.getObject(), modelPerimeter.getObject(), modelCadence.getObject());
 			final double[][] calcData = data.getResult();
 
 			final List<AbstractMap.SimpleEntry<Integer, List<Double>>> result = new ArrayList<>();

@@ -27,7 +27,7 @@ import lombok.NonNull;
  * @author Novikov
  */
 @Data
-public class SpeedData
+public class SpeedDataCalc
 {
 
 	@NonNull
