@@ -1,8 +1,11 @@
 {
-    "elements": {},
-    "attributes": {
-        "wicket:id": {
-            "context": "tr"
-        }
-    }
+	"elements": {
+		"wicket:message": {}
+	},
+	"attributes": {
+		"wicket:id": {
+			"context": "tr"
+		},
+		"key": {}
+	}
 }
