@@ -27,6 +27,10 @@ public class PerimeterService {
     public List<Perimeter> getPerimeter() {
         final List<Perimeter> list = new ArrayList<>();
         {
+            final Perimeter item1 = new Perimeter("23-622", "700*23C", 2096);
+            list.add(item1);
+        }
+        {
             final Perimeter item1 = new Perimeter("25-622", "700*25C", 2105);
             list.add(item1);
         }
@@ -40,6 +44,14 @@ public class PerimeterService {
         }
         {
             final Perimeter item1 = new Perimeter("25-584", "650*25B", 1991);
+            list.add(item1);
+        }
+        {
+            final Perimeter item1 = new Perimeter("23-571", "650x23C", 1944);
+            list.add(item1);
+        }
+        {
+            final Perimeter item1 = new Perimeter("25-571", "650x25C", 1952);
             list.add(item1);
         }
 
