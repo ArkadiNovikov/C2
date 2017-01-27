@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.untitleddoc.web.wicket;
+package com.untitleddoc.cadencecalc.web.wicket;
 
-import com.untitleddoc.cadencecalc.jaxrs.models.Crankset;
+import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter;
 import java.util.List;
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
@@ -23,10 +23,10 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
 
 /**
- * Jersey REST client generated for REST resource:Crankset [crankset]<br>
+ * Jersey REST client generated for REST resource:Perimeter [perimeter]<br>
  * USAGE:
  * <pre>
- *        CranksetClient client = new CranksetClient();
+ *        PerimeterClient client = new PerimeterClient();
  *        Object response = client.XXX(...);
  *        // do whatever with response
  *        client.close();
@@ -34,20 +34,20 @@ import javax.ws.rs.core.GenericType;
  *
  * @author Novikov
  */
-public class CranksetClient {
+public class PerimeterClient {
 
     private final WebTarget webTarget;
     private final Client client;
     private static final String BASE_URI = "http://localhost:8080/jax-rs/webresources";
 
-    public CranksetClient() {
+    public PerimeterClient() {
         client = javax.ws.rs.client.ClientBuilder.newClient();
-        webTarget = client.target(BASE_URI).path("crankset");
+        webTarget = client.target(BASE_URI).path("perimeter");
     }
 
-    public List<Crankset> getCrankset() throws ClientErrorException {
+    public List<Perimeter> getPerimeter() throws ClientErrorException {
         WebTarget resource = webTarget;
-        return resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(new GenericType<List<Crankset>>(){});
+        return resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(new GenericType<List<Perimeter>>(){});
     }
 
     public void close() {

@@ -1,4 +1,4 @@
-package com.untitleddoc.web.wicket;
+package com.untitleddoc.cadencecalc.web.wicket;
 
 import com.untitleddoc.cadencecalc.jaxrs.models.Crankset;
 import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter;

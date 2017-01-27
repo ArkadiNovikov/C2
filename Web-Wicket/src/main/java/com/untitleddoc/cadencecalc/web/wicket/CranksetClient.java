@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.untitleddoc.web.wicket;
+package com.untitleddoc.cadencecalc.web.wicket;
 
-import com.untitleddoc.cadencecalc.jaxrs.models.Sproket;
+import com.untitleddoc.cadencecalc.jaxrs.models.Crankset;
 import java.util.List;
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
@@ -23,10 +23,10 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
 
 /**
- * Jersey REST client generated for REST resource:Sproket [sproket]<br>
+ * Jersey REST client generated for REST resource:Crankset [crankset]<br>
  * USAGE:
  * <pre>
- *        SproketClient client = new SproketClient();
+ *        CranksetClient client = new CranksetClient();
  *        Object response = client.XXX(...);
  *        // do whatever with response
  *        client.close();
@@ -34,20 +34,20 @@ import javax.ws.rs.core.GenericType;
  *
  * @author Novikov
  */
-public class SproketClient {
+public class CranksetClient {
 
     private final WebTarget webTarget;
     private final Client client;
     private static final String BASE_URI = "http://localhost:8080/jax-rs/webresources";
 
-    public SproketClient() {
+    public CranksetClient() {
         client = javax.ws.rs.client.ClientBuilder.newClient();
-        webTarget = client.target(BASE_URI).path("sproket");
+        webTarget = client.target(BASE_URI).path("crankset");
     }
 
-    public List<Sproket> getSproket() throws ClientErrorException {
+    public List<Crankset> getCrankset() throws ClientErrorException {
         WebTarget resource = webTarget;
-        return resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(new GenericType<List<Sproket>>(){});
+        return resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(new GenericType<List<Crankset>>(){});
     }
 
     public void close() {

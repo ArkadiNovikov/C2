@@ -91,7 +91,7 @@
 			<artifactId>wicket-extensions</artifactId>
 			<version>${wicket.version}</version>
 		</dependency>
-<!--		<dependency>
+		<!--		<dependency>
 			<groupId>org.apache.wicket</groupId>
 			<artifactId>wicket-bootstrap</artifactId>
 			<version>0.17</version>
@@ -106,7 +106,7 @@
 			<artifactId>wicket-cdi-1.1</artifactId>
 			<version>7.4.0</version>
 		</dependency>
-<!--		<dependency>
+		<!--		<dependency>
 			<groupId>org.wicketstuff</groupId>
 			<artifactId>annotation</artifactId>
 			<version>1.4.21</version>
@@ -126,12 +126,12 @@
 			<artifactId>wicked-charts-wicket7</artifactId>
 			<version>2.0.0</version>
 		</dependency>
-<!--		<dependency>
+		<!--		<dependency>
 			<groupId>org.wicketstuff</groupId>
 			<artifactId>wicketstuff-inmethod-grid</artifactId>
 			<version>7.4.0</version>
 		</dependency>-->
-<!--		<dependency>
+		<!--		<dependency>
 			<groupId>org.odlabs.wiquery</groupId>
 			<artifactId>wiquery-core</artifactId>
 			<version>6.6.0</version>

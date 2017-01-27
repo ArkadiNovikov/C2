@@ -1,4 +1,4 @@
-package com.untitleddoc.web.wicket;
+package com.untitleddoc.cadencecalc.web.wicket;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.wicket.markup.html.WebPage;
