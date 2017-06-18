@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.untitleddoc.cadencecalc</groupId>
 		<artifactId>CadenceCalc</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0</version>
 	</parent>
 	<artifactId>jax-rs-models</artifactId>
 	<packaging>jar</packaging>
