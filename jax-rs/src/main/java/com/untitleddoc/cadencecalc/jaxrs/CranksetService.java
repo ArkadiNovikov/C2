@@ -138,6 +138,36 @@ public class CranksetService
 			final Crankset item = new Crankset("FC-M9000-3", "Shimano", tooths);
 			list.add(item);
 		}
+		{
+			final List<Integer> tooths = Arrays.asList(38);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("Force 1", "SRAM", tooths);
+			list.add(item);
+		}
+		{
+			final List<Integer> tooths = Arrays.asList(40);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("Force 1", "SRAM", tooths);
+			list.add(item);
+		}
+		{
+			final List<Integer> tooths = Arrays.asList(42);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("Force 1", "SRAM", tooths);
+			list.add(item);
+		}
+		{
+			final List<Integer> tooths = Arrays.asList(44);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("Force 1", "SRAM", tooths);
+			list.add(item);
+		}
+		{
+			final List<Integer> tooths = Arrays.asList(46);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("Force 1", "SRAM", tooths);
+			list.add(item);
+		}
 		return list;
 	}
 }

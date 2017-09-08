@@ -94,6 +94,14 @@ public class SproketService
 			item.setTooths(tooths);
 			list.add(item);
 		}
+		{
+			final Sproket item = new Sproket();
+			item.setName("XG-1180");
+			final List<Integer> tooths = Arrays.asList(10, 12, 14, 16, 18, 21, 24, 28, 32, 36, 42);
+			tooths.sort(Comparator.naturalOrder());
+			item.setTooths(tooths);
+			list.add(item);
+		}
 
 		return list;
 	}

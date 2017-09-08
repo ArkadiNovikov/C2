@@ -45,6 +45,10 @@ public class PerimeterService
 			list.add(item1);
 		}
 		{
+			final Perimeter item1 = new Perimeter("28-584", "650*28B", 2010);
+			list.add(item1);
+		}
+		{
 			final Perimeter item1 = new Perimeter("40-584", "27.5*1.50", 2079);
 			list.add(item1);
 		}
