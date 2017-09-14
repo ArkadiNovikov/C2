@@ -53,7 +53,7 @@ public class PerimeterService
 			list.add(item1);
 		}
 		{
-			final Perimeter item1 = new Perimeter("47-584", "650*47", 2136);
+			final Perimeter item1 = new Perimeter("47-584", "650*47B", 2136);
 			list.add(item1);
 		}
 		{
