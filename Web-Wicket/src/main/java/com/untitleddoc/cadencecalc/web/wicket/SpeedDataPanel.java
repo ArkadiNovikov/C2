@@ -19,6 +19,7 @@ import com.google.common.collect.Lists;
 import com.untitleddoc.cadencecalc.jaxrs.models.Crankset;
 import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter;
 import com.untitleddoc.cadencecalc.jaxrs.models.Sproket;
+import java.math.BigDecimal;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,12 +43,12 @@ public final class SpeedDataPanel extends Panel
 	private final IModel<Sproket> modelSproket;
 	private final IModel<Perimeter> modelPerimeter;
 	private final IModel<Integer> modelCadence;
-	private final IModel<ArrayList<Integer>> modelSproketTooths = new LoadableDetachableModel<ArrayList<Integer>>()
+	private final IModel<ArrayList<Double>> modelSproketTooths = new LoadableDetachableModel<ArrayList<Double>>()
 	{
 		private static final long serialVersionUID = SpeedDataPanel.serialVersionUID;
 
 		@Override
-		protected ArrayList<Integer> load()
+		protected ArrayList<Double> load()
 		{
 			return Lists.newArrayList(modelSproket.getObject().getTooths());
 		}
@@ -77,7 +78,7 @@ public final class SpeedDataPanel extends Panel
 		}
 	};
 
-	private final ListView<Integer> headers;
+	private final ListView<Double> headers;
 	private final ListView<AbstractMap.SimpleEntry<Integer, List<Double>>> dataList;
 
 	public SpeedDataPanel(final String id,
@@ -91,14 +92,14 @@ public final class SpeedDataPanel extends Panel
 		this.modelPerimeter = modelPerimeter;
 		this.modelCadence = modelCadence;
 
-		headers = new ListView<Integer>("headers", modelSproketTooths)
+		headers = new ListView<Double>("headers", modelSproketTooths)
 		{
 			private static final long serialVersionUID = SpeedDataPanel.serialVersionUID;
 
 			@Override
-			protected void populateItem(final ListItem<Integer> item)
+			protected void populateItem(final ListItem<Double> item)
 			{
-				item.add(new Label("header", item.getModelObject()).setOutputMarkupId(true));
+				item.add(new Label("header", new BigDecimal(item.getModelObject()).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue()).setOutputMarkupId(true));
 			}
 		};
 		headers.setOutputMarkupId(true);

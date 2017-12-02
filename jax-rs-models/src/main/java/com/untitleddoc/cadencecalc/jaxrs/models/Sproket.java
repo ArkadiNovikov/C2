@@ -6,6 +6,7 @@
 package com.untitleddoc.cadencecalc.jaxrs.models;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
@@ -23,7 +24,7 @@ public class Sproket implements Serializable {
     private static final long serialVersionUID = -6668484495934477324L;
 
     private String name;
-    private List<Integer> tooths;
+    private List<Double> tooths;
 
     public Sproket() {
     }
@@ -32,9 +33,9 @@ public class Sproket implements Serializable {
         String str = "";
         str += getName();
         str += " (";
-        str += tooths.get(0);
+        str += new BigDecimal(tooths.get(0)).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
         str += "-";
-        str += tooths.get(tooths.size()-1);
+        str += new BigDecimal(tooths.get(tooths.size()-1)).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
         str += ")";
         return str;
     }
