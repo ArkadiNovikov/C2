@@ -8,7 +8,7 @@
 	<packaging>pom</packaging>  
 	<properties> 
 		<jetty.version>9.4.8.v20171121</jetty.version>  
-		<wicket.version>7.4.0</wicket.version>  
+		<wicket.version>7.10.0</wicket.version>  
 		<kotlin.version>1.2.21</kotlin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>  
