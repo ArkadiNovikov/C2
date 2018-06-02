@@ -25,13 +25,11 @@ import lombok.val;
  */
 @Path("sproket")
 @Stateless
-public class SproketService
-{
+public class SproketService {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<com.untitleddoc.cadencecalc.jaxrs.models.Sproket> getSproket()
-	{
+	public List<com.untitleddoc.cadencecalc.jaxrs.models.Sproket> getSproket() {
 		final val list = new ArrayList<Sproket>();
 		{
 			final val item = new Sproket();
@@ -99,6 +97,30 @@ public class SproketService
 		}
 		{
 			final val item = new Sproket();
+			item.setName("CS-M9100-12");
+			final val tooths = Arrays.asList(10d, 12d, 14d, 16d, 18d, 21d, 24d, 28d, 32d, 36d, 40d, 45d);
+			tooths.sort(Comparator.naturalOrder());
+			item.setTooths(tooths);
+			list.add(item);
+		}
+		{
+			final val item = new Sproket();
+			item.setName("CS-M9100-12");
+			final val tooths = Arrays.asList(10d, 12d, 14d, 16d, 18d, 21d, 24d, 28d, 33d, 39d, 45d, 51d);
+			tooths.sort(Comparator.naturalOrder());
+			item.setTooths(tooths);
+			list.add(item);
+		}
+		{
+			final val item = new Sproket();
+			item.setName("CS-M9100-11");
+			final val tooths = Arrays.asList(10d, 12d, 14d, 16d, 18d, 21d, 24d, 28d, 33d, 39d, 45d);
+			tooths.sort(Comparator.naturalOrder());
+			item.setTooths(tooths);
+			list.add(item);
+		}
+		{
+			final val item = new Sproket();
 			item.setName("XG-1180");
 			final val tooths = Arrays.asList(10d, 12d, 14d, 16d, 18d, 21d, 24d, 28d, 32d, 36d, 42d);
 			tooths.sort(Comparator.naturalOrder());
@@ -109,7 +131,7 @@ public class SproketService
 			final val cogT = 13;
 			final val item = new Sproket();
 			item.setName("SPEEDHUB 500/14 " + cogT + "t");
-			final val tooths = Arrays.asList(cogT/0.279, cogT/0.316, cogT/0.360, cogT/0.409, cogT/0.464, cogT/0.528, cogT/0.600, cogT/0.682, cogT/0.774, cogT/0.881, cogT/1.000, cogT/1.135, cogT/1.292, cogT/1.467);
+			final val tooths = Arrays.asList(cogT / 0.279, cogT / 0.316, cogT / 0.360, cogT / 0.409, cogT / 0.464, cogT / 0.528, cogT / 0.600, cogT / 0.682, cogT / 0.774, cogT / 0.881, cogT / 1.000, cogT / 1.135, cogT / 1.292, cogT / 1.467);
 			tooths.sort(Comparator.naturalOrder());
 			item.setTooths(tooths);
 			list.add(item);
@@ -118,7 +140,7 @@ public class SproketService
 			final val cogT = 15;
 			final val item = new Sproket();
 			item.setName("SPEEDHUB 500/14 " + cogT + "t");
-			final val tooths = Arrays.asList(cogT/0.279, cogT/0.316, cogT/0.360, cogT/0.409, cogT/0.464, cogT/0.528, cogT/0.600, cogT/0.682, cogT/0.774, cogT/0.881, cogT/1.000, cogT/1.135, cogT/1.292, cogT/1.467);
+			final val tooths = Arrays.asList(cogT / 0.279, cogT / 0.316, cogT / 0.360, cogT / 0.409, cogT / 0.464, cogT / 0.528, cogT / 0.600, cogT / 0.682, cogT / 0.774, cogT / 0.881, cogT / 1.000, cogT / 1.135, cogT / 1.292, cogT / 1.467);
 			tooths.sort(Comparator.naturalOrder());
 			item.setTooths(tooths);
 			list.add(item);
@@ -127,7 +149,7 @@ public class SproketService
 			final val cogT = 16;
 			final val item = new Sproket();
 			item.setName("SPEEDHUB 500/14 " + cogT + "t");
-			final val tooths = Arrays.asList(cogT/0.279, cogT/0.316, cogT/0.360, cogT/0.409, cogT/0.464, cogT/0.528, cogT/0.600, cogT/0.682, cogT/0.774, cogT/0.881, cogT/1.000, cogT/1.135, cogT/1.292, cogT/1.467);
+			final val tooths = Arrays.asList(cogT / 0.279, cogT / 0.316, cogT / 0.360, cogT / 0.409, cogT / 0.464, cogT / 0.528, cogT / 0.600, cogT / 0.682, cogT / 0.774, cogT / 0.881, cogT / 1.000, cogT / 1.135, cogT / 1.292, cogT / 1.467);
 			tooths.sort(Comparator.naturalOrder());
 			item.setTooths(tooths);
 			list.add(item);
@@ -136,7 +158,7 @@ public class SproketService
 			final val cogT = 17;
 			final val item = new Sproket();
 			item.setName("SPEEDHUB 500/14 " + cogT + "t");
-			final val tooths = Arrays.asList(cogT/0.279, cogT/0.316, cogT/0.360, cogT/0.409, cogT/0.464, cogT/0.528, cogT/0.600, cogT/0.682, cogT/0.774, cogT/0.881, cogT/1.000, cogT/1.135, cogT/1.292, cogT/1.467);
+			final val tooths = Arrays.asList(cogT / 0.279, cogT / 0.316, cogT / 0.360, cogT / 0.409, cogT / 0.464, cogT / 0.528, cogT / 0.600, cogT / 0.682, cogT / 0.774, cogT / 0.881, cogT / 1.000, cogT / 1.135, cogT / 1.292, cogT / 1.467);
 			tooths.sort(Comparator.naturalOrder());
 			item.setTooths(tooths);
 			list.add(item);
