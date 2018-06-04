@@ -7,9 +7,9 @@
 	<version>1.0</version>  
 	<packaging>pom</packaging>  
 	<properties> 
-		<jetty.version>9.4.9.v20180320</jetty.version>  
+		<jetty.version>9.4.10.v20180503</jetty.version>  
 		<wicket.version>7.10.0</wicket.version>  
-		<kotlin.version>1.2.31</kotlin.version>
+		<kotlin.version>1.2.41</kotlin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>  
 	<modules> 
@@ -88,7 +88,7 @@
 			<dependency> 
 				<groupId>com.google.guava</groupId>  
 				<artifactId>guava</artifactId>  
-				<version>25.0-jre</version>
+				<version>25.1-jre</version>
 			</dependency>  
 			<!-- LOGGING DEPENDENCIES - LOG -->  
 			<dependency> 
@@ -187,12 +187,12 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
-					<version>3.2.0</version>
+					<version>3.2.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
-					<version>3.0.2</version>
+					<version>3.1.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
