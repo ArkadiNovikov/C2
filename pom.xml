@@ -18,7 +18,8 @@
 		<module>jax-rs-models</module>  
 		<module>Web-JEE</module>
 		<module>Web-Wicket-Kotlin</module>
-	</modules>  
+		<module>jax-rs-kotlin</module>
+  </modules>  
 	<repositories> 
 		<repository> 
 			<id>wicketstuff-core-releases</id>  
@@ -41,6 +42,12 @@
 				<artifactId>kotlin-stdlib</artifactId>  
 				<version>${kotlin.version}</version> 
 			</dependency> 
+			<dependency>
+				<groupId>org.jetbrains.kotlin</groupId>
+				<artifactId>kotlin-test-junit</artifactId>
+				<version>${kotlin.version}</version>
+				<scope>test</scope>
+			</dependency>
 
 			<!-- JPA Dep -->  
 			<dependency> 
