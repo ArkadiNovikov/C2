@@ -179,8 +179,44 @@
 	</dependencies>
 
 	<build>
-		<sourceDirectory>${project.basedir}/src/main</sourceDirectory>
-		<testSourceDirectory>${project.basedir}/src/test</testSourceDirectory>
+		<sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/src/kotlin/test</testSourceDirectory>
+		
+		<resources>
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/main/resources</directory>
+			</resource>
+
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/main/kotlin</directory>
+				<includes>
+					<include>**</include>
+				</includes>
+
+				<excludes>
+					<exclude>**/*.java</exclude>
+					<exclude>**/*.kt</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+			</testResource>
+			<testResource>
+				<directory>src/test/java</directory>
+				<includes>
+					<include>**</include>
+				</includes>
+				<excludes>
+					<exclude>**/*.java</exclude>
+					<exclude>**/*.kt</exclude>
+				</excludes>
+			</testResource>
+		</testResources>
+		
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

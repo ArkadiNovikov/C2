@@ -43,14 +43,14 @@ public final class SpeedDataPanel extends Panel
 	private final IModel<Sproket> modelSproket;
 	private final IModel<Perimeter> modelPerimeter;
 	private final IModel<Integer> modelCadence;
-	private final IModel<ArrayList<Double>> modelSproketTooths = new LoadableDetachableModel<ArrayList<Double>>()
+	private final IModel<List<Double>> modelSproketTooths = new LoadableDetachableModel<List<Double>>()
 	{
 		private static final long serialVersionUID = SpeedDataPanel.serialVersionUID;
 
 		@Override
-		protected ArrayList<Double> load()
+		protected List<Double> load()
 		{
-			return Lists.newArrayList(modelSproket.getObject().getTooths());
+			return modelSproket.getObject().getTooths();
 		}
 	};
 	private final IModel<List<AbstractMap.SimpleEntry<Integer, List<Double>>>> modelDataTable = new LoadableDetachableModel<List<AbstractMap.SimpleEntry<Integer, List<Double>>>>()

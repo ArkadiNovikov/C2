@@ -139,6 +139,48 @@ public class CranksetService
 			list.add(item);
 		}
 		{
+			final List<Integer> tooths = Arrays.asList(28, 38);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("FC-M9100-2", "Shimano", tooths);
+			list.add(item);
+		}
+		{
+			final List<Integer> tooths = Arrays.asList(30);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("SM-CRM95", "Shimano", tooths);
+			list.add(item);
+		}
+		{
+			final List<Integer> tooths = Arrays.asList(30);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("SM-CRM95", "Shimano", tooths);
+			list.add(item);
+		}
+		{
+			final List<Integer> tooths = Arrays.asList(32);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("SM-CRM95", "Shimano", tooths);
+			list.add(item);
+		}
+		{
+			final List<Integer> tooths = Arrays.asList(34);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("SM-CRM95", "Shimano", tooths);
+			list.add(item);
+		}
+		{
+			final List<Integer> tooths = Arrays.asList(36);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("SM-CRM95", "Shimano", tooths);
+			list.add(item);
+		}
+		{
+			final List<Integer> tooths = Arrays.asList(38);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("SM-CRM95", "Shimano", tooths);
+			list.add(item);
+		}
+		{
 			final List<Integer> tooths = Arrays.asList(38);
 			tooths.sort(Comparator.reverseOrder());
 			final Crankset item = new Crankset("Force 1", "SRAM", tooths);
