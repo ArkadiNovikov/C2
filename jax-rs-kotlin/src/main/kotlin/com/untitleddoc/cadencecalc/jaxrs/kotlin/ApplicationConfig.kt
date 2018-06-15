@@ -13,24 +13,24 @@ import javax.ws.rs.core.Application
  */
 @javax.ws.rs.ApplicationPath("webresources")
 class ApplicationConfig : Application() {
-//    @Override
-//    public override fun getClasses() : Set<Class<*>>
-//    {
-//        val resources = java.util.HashSet<Class<*>>()
-//        addRestResourceClasses(resources)
-//        return resources
-//    }
-//
-//    
-//    
-//    /**
-//     * Do not modify addRestResourceClasses() method. It is automatically
-//     * populated with all resources defined in the project. If required, comment
-//     * out calling this method in getClasses().
-//     */
-//    private fun addRestResourceClasses(resources: MutableSet<Class<*>>?) {
-//        resources!!.add(com.untitleddoc.cadencecalc.jaxrs.kotlin.CranksetService::class.java)
-//        resources!!.add(com.untitleddoc.cadencecalc.jaxrs.kotlin.PerimeterService::class.java)
-//        resources!!.add(com.untitleddoc.cadencecalc.jaxrs.kotlin.SproketService::class.java)
-//    }
+    @Override
+    public override fun getClasses() : Set<Class<*>>
+    {
+        val resources = java.util.HashSet<Class<*>>()
+        addRestResourceClasses(resources)
+        return resources
+    }
+
+    
+    
+    /**
+     * Do not modify addRestResourceClasses() method. It is automatically
+     * populated with all resources defined in the project. If required, comment
+     * out calling this method in getClasses().
+     */
+    private fun addRestResourceClasses(resources: MutableSet<Class<*>>) {
+        resources.add(com.untitleddoc.cadencecalc.jaxrs.kotlin.CranksetService::class.java)
+        resources.add(com.untitleddoc.cadencecalc.jaxrs.kotlin.PerimeterService::class.java)
+        resources.add(com.untitleddoc.cadencecalc.jaxrs.kotlin.SproketService::class.java)
+    }
 }
