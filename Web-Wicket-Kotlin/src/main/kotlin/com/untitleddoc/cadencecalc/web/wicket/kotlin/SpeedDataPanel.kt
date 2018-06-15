@@ -37,7 +37,7 @@ class SpeedDataPanel(id: String, modelCrankset: IModel<Crankset>, modelSproket: 
             val calcData = data.getResult()
 
             val result: MutableList<Pair<Int, List<Double>>> = mutableListOf()
-            for (index in 0 until calcData.size) {
+            for (index in calcData.indices) {
                 val key = modelCrankset.getObject().tooths[index]
                 val row = calcData[index]
 
