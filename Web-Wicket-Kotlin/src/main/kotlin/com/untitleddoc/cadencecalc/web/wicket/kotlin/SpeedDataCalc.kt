@@ -5,9 +5,6 @@
  */
 package com.untitleddoc.cadencecalc.web.wicket.kotlin
 
-import com.untitleddoc.cadencecalc.jaxrs.models.Crankset
-import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter
-import com.untitleddoc.cadencecalc.jaxrs.models.Sproket
 import java.math.BigDecimal
 
 /*
@@ -16,17 +13,15 @@ import java.math.BigDecimal
   Created on 2018/02/21
 */
 
-public data class SpeedDataCalc(val crankset: Crankset, val sproket: Sproket, val perimeter: Perimeter, var cadence: Int = 0) {
-    public fun getResult(): MutableList<MutableList<Double>>
-    {
-        var data: MutableList<MutableList<Double>> = mutableListOf()
-        
-        for(crank in crankset.getTooths())
-		{
-			var row = sproket.getTooths().map { BigDecimal(crank / it * cadence * perimeter.getPerimeterValue() * 60 / 1000 / 1000).setScale(1, BigDecimal.ROUND_HALF_UP).toDouble() }
-            data.add(row.toMutableList())
+public data class SpeedDataCalc(val cranksetTooths: Iterable<Int>, val sproketTooths: Iterable<Double>, val perimeter: Int, var cadence: Int) {
+    public fun getResult(): List<List<Double>> {
+        var data: MutableList<List<Double>> = mutableListOf()
+
+        for (crank in cranksetTooths) {
+            var row = sproketTooths.map { BigDecimal(crank / it * cadence.toInt() * perimeter * 60 / 1000 / 1000).setScale(1, BigDecimal.ROUND_HALF_UP).toDouble() }
+            data.add(row.toList())
         }
-        
+
         return data
     }
 }

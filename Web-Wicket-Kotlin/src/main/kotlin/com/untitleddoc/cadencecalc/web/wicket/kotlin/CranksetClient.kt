@@ -19,12 +19,13 @@ import javax.ws.rs.core.GenericType;
 class CranksetClient {
     private val client: Client
     private val webTarget: WebTarget
-    private val BASE_URI = "http://localhost:8080/jax-rs/webresources"
+    private val BASE_URI = "http://localhost:8080/jax-rs-kotlin/webresources"
 
     constructor() {
         client = javax.ws.rs.client.ClientBuilder.newClient()
         webTarget = client.target(BASE_URI).path("crankset")
     }
-    public fun getCrankset() = webTarget.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(object : GenericType<List<Crankset>>(){})
+
+    public fun getCrankset() = webTarget.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(object : GenericType<List<Crankset>>() {})
     public fun close() = client.close()
 }

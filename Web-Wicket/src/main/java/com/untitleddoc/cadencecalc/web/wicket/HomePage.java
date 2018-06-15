@@ -87,8 +87,7 @@ public class HomePage extends BasePage
 			@Override
 			public Crankset getObject(String arg0, IModel<? extends List<? extends Crankset>> arg1)
 			{
-				return arg1.getObject().stream().filter(x
-						-> String.valueOf(x.hashCode()).equals(arg0)).findFirst().get();
+				return arg1.getObject().stream().filter(x -> String.valueOf(x.hashCode()).equals(arg0)).findFirst().get();
 			}
 		});
 
@@ -111,8 +110,7 @@ public class HomePage extends BasePage
 			@Override
 			public Sproket getObject(String arg0, IModel<? extends List<? extends Sproket>> arg1)
 			{
-				return arg1.getObject().stream().filter(x
-						-> String.valueOf(x.hashCode()).equals(arg0)).findFirst().get();
+				return arg1.getObject().stream().filter(x -> String.valueOf(x.hashCode()).equals(arg0)).findFirst().get();
 			}
 
 		});
@@ -136,8 +134,7 @@ public class HomePage extends BasePage
 			@Override
 			public Perimeter getObject(String arg0, IModel<? extends List<? extends Perimeter>> arg1)
 			{
-				return arg1.getObject().stream().filter(x
-						-> String.valueOf(x.hashCode()).equals(arg0)).findFirst().get();
+				return arg1.getObject().stream().filter(x -> String.valueOf(x.hashCode()).equals(arg0)).findFirst().get();
 			}
 		});
 
