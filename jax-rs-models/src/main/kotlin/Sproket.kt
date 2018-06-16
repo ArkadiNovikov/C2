@@ -12,8 +12,10 @@
 package com.untitleddoc.cadencecalc.jaxrs.models.kotlin
 
 import java.io.Serializable
+import javax.xml.bind.annotation.XmlRootElement
 import kotlin.math.*
 
+@XmlRootElement
 public data class Sproket(val name: String, val tooths: List<Double>) : Serializable {
     public fun displayValue(): String {
         return "$name (" + (round(tooths.first()*10)/10) + "-" + (round(tooths.last()*10)/10) + ")"

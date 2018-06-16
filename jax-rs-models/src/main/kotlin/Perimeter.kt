@@ -12,7 +12,9 @@
 package com.untitleddoc.cadencecalc.jaxrs.models.kotlin
 
 import java.io.Serializable
+import javax.xml.bind.annotation.XmlRootElement
 
+@XmlRootElement
 public data class Perimeter(val etrto: String, val french: String, val perimeterValue: Int) : Serializable {
     public fun displayValue(): String = "$etrto ($french)"
 }
