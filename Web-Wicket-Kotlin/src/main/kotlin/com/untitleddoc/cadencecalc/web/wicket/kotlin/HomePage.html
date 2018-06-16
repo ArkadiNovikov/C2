@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<html xmlns:wicket="http://wicket.apache.org">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>C2</title>
         <!--<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />-->
-        <link rel="stylesheet" type="text/css" href="http://cdn.honokak.osaka/umi/3.3.7-2/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" href="../../../../../webapp/css/bootstrap.css" type="text/css"/>
         <style type="text/css">
             body { padding-top: 80px; }
         </style>
@@ -18,7 +18,40 @@
         <![endif]-->
     </head>
     <body>
-        Hello there!!!
+        <div class="container">
+            <div class="page-header">
+                <h1>C2</h1>
+                <p class="lead">Bicycle Speed Calculator</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="form-horizontal" wicket:id="input">
+                        <div class="form-group">
+                            <h3><wicket:message key="Crankset">Crankset</wicket:message></h3>
+                            <select class="form-control" name="Crankset" wicket:id="crankset">
+                                <option>FC-9000</option>
+                                <option>FC-6800</option>
+                            </select>
+                            <h3><wicket:message key="Sprocket">Sprocket</wicket:message></h3>
+                            <select class="form-control" name="Sprocket" wicket:id="sprocket">
+                                <option></option>
+                                <option></option>
+                            </select>
+                            <h3><wicket:message key="Perimeter">Perimeter</wicket:message></h3>
+                            <select class="form-control" name="Perimeter" wicket:id="perimeter">
+                                <option></option>
+                                <option></option>
+                            </select>
+                            <h3><wicket:message key="Cadence">Cadence</wicket:message></h3>
+                            <input type="number" class="form-control" wicket:id="cadence">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-sm-6" wicket:id="speedData"></div>
+
+            </div>
+        </div>
 
     </body>
 </html>

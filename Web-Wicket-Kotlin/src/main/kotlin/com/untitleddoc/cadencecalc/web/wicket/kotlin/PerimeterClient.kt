@@ -19,13 +19,13 @@ import javax.ws.rs.core.GenericType;
 class PerimeterClient {
     private val client: Client
     private val webTarget: WebTarget
-    private val BASE_URI = "http://localhost:8080/jax-rs/webresources"
+    private val BASE_URI = "http://localhost:8080/jax-rs-kotlin/webresources"
 
     constructor() {
         client = javax.ws.rs.client.ClientBuilder.newClient()
         webTarget = client.target(BASE_URI).path("perimeter")
     }
 
-    public fun getPerimeter() = webTarget.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(object : GenericType<List<Perimeter>>(){})
+    public fun getPerimeter() = webTarget.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(object : GenericType<List<Perimeter>>() {})
     public fun close() = client.close()
 }

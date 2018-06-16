@@ -22,15 +22,15 @@ class WicketApplication : WebApplication() {
     override fun init(): Unit {
         super.init()
 
-		//レスポンスのエンコーディング設定
-		getRequestCycleSettings().setResponseRequestEncoding("UTF-8")
+        //レスポンスのエンコーディング設定
+        getRequestCycleSettings().setResponseRequestEncoding("UTF-8")
     }
 
     override fun getHomePage(): Class<out Page> {
         return HomePage::class.java
     }
 
-    override fun getConfigurationType() : RuntimeConfigurationType {
+    override fun getConfigurationType(): RuntimeConfigurationType {
         return super.getConfigurationType()
     }
 }

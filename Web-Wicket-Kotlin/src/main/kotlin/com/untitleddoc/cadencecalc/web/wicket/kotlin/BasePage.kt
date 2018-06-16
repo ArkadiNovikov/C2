@@ -10,15 +10,11 @@ import org.apache.wicket.request.mapper.parameter.PageParameters
 
 /*
 
-  @author kisiy
+  @author k-aki
   Created on 2018/02/12
 */
 
 public abstract class BasePage : WebPage {
-    companion object {
-        @JvmStatic private val serialVersionUID: Long = -7565557356813846136L
-    }
-
     constructor() : super()
     constructor(parameters: PageParameters) : super(parameters)
 }
