@@ -67,19 +67,19 @@ class HomePage : BasePage() {
         inputDropDownCrankset = DropDownChoice<Crankset>("crankset", modelCrank, cranks, object : IChoiceRenderer<Crankset> {
             override fun getDisplayValue(`object`: Crankset) = `object`.displayValue()
             override fun getIdValue(arg0: Crankset, arg1: Int): String = arg0.hashCode().toString()
-            override fun getObject(arg0: String, arg1: IModel<out List<out Crankset>>): Crankset = arg1.getObject().stream().filter({ x -> x.hashCode().toString() == arg0 }).findFirst().get()
+            override fun getObject(arg0: String, arg1: IModel<out List<out Crankset>>): Crankset = arg1.getObject().first { it.hashCode().toString() == arg0 }
         })
 
         inputDropDownSprocket = DropDownChoice("sprocket", modelSproket, sprokets, object : IChoiceRenderer<Sproket> {
             override fun getDisplayValue(`object`: Sproket) = `object`.displayValue()
             override fun getIdValue(arg0: Sproket, arg1: Int): String = arg0.hashCode().toString()
-            override fun getObject(arg0: String, arg1: IModel<out List<out Sproket>>): Sproket = arg1.getObject().stream().filter({ x -> x.hashCode().toString() == arg0 }).findFirst().get()
+            override fun getObject(arg0: String, arg1: IModel<out List<out Sproket>>): Sproket = arg1.getObject().first { it.hashCode().toString() == arg0 }
         })
 
         inputDropDownPerimeter = DropDownChoice("perimeter", modelPerimeter, perimeters, object : IChoiceRenderer<Perimeter> {
             override fun getDisplayValue(`object`: Perimeter) = `object`.displayValue()
             override fun getIdValue(arg0: Perimeter, arg1: Int): String = arg0.hashCode().toString()
-            override fun getObject(arg0: String, arg1: IModel<out List<out Perimeter>>): Perimeter = arg1.getObject().stream().filter({ x -> x.hashCode().toString() == arg0 }).findFirst().get()
+            override fun getObject(arg0: String, arg1: IModel<out List<out Perimeter>>): Perimeter = arg1.getObject().first { it.hashCode().toString() == arg0 }
         })
 
         panelSpeedData = SpeedDataPanel("speedData", modelCrank, modelSproket, modelPerimeter, modelCadence)
