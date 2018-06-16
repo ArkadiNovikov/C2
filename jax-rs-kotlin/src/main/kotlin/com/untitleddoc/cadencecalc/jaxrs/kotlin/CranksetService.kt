@@ -27,7 +27,6 @@ class CranksetService {
 
         val fc9k = Crankset("FC-9000", "Shimano", listOf(34, 50))
         list.add(fc9k)
-        list.add(fc9k.copy(tooths = listOf(34, 50)))
         list.add(fc9k.copy(tooths = listOf(36, 52)))
         list.add(fc9k.copy(tooths = listOf(38, 52)))
         list.add(fc9k.copy(tooths = listOf(39, 53)))
