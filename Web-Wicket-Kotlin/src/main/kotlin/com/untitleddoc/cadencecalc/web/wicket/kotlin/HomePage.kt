@@ -84,8 +84,8 @@ class HomePage : BasePage() {
 
         panelSpeedData = SpeedDataPanel("speedData", modelCrank, modelSproket, modelPerimeter, modelCadence)
 
-        //inputCadence.setMinimum(0)
-        //inputCadence.setMaximum(300)
+        inputCadence.setMinimum(0)
+        inputCadence.setMaximum(300)
         inputDropDownCrankset.add(OnChangeLocalBehavior())
         inputDropDownSprocket.add(OnChangeLocalBehavior())
         inputDropDownPerimeter.add(OnChangeLocalBehavior())
