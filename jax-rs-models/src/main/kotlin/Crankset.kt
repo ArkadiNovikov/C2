@@ -11,10 +11,11 @@
 
 package com.untitleddoc.cadencecalc.jaxrs.models.kotlin
 
+import com.untitleddoc.cadencecalc.jaxrs.models.IC2Model
 import java.io.Serializable
 import javax.xml.bind.annotation.XmlRootElement
 
 @XmlRootElement
-public data class Crankset(val name: String, val manufacture: String, val tooths: List<Int>): Serializable {
-    public fun displayValue(): String = name + tooths.joinToString("-", " (", ")")
+public data class Crankset(val name: String, val manufacture: String, val tooths: List<Int>): Serializable, IC2Model {
+    public override fun displayValue(): String = name + tooths.joinToString("-", " (", ")")
 }

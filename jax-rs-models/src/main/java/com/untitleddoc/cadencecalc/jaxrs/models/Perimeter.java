@@ -17,7 +17,7 @@ import lombok.Data;
 @XmlRootElement
 @Data
 @AllArgsConstructor
-public class Perimeter implements Serializable {
+public class Perimeter implements Serializable, IC2Model {
 
     private static final long serialVersionUID = 165573926447503641L;
 
@@ -28,6 +28,7 @@ public class Perimeter implements Serializable {
     public Perimeter() {
     }
 
+	@Override
     public String displayValue() {
         return getEtrto() + " (" + getFrench() + ")";
     }
