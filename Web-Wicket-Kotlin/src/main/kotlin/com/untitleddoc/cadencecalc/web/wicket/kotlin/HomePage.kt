@@ -52,8 +52,8 @@ class HomePage : BasePage() {
     }
 
     private inner class C2ChoiceRenderer : IChoiceRenderer<IC2Model> {
-        override fun getIdValue(`object`: IC2Model, index: Int): String = `object`.hashCode().toString()
-        override fun getDisplayValue(`object`: IC2Model): String = `object`.displayValue()
+        override fun getIdValue(obj: IC2Model, index: Int): String = obj.hashCode().toString()
+        override fun getDisplayValue(obj: IC2Model): String = obj.displayValue()
         override fun getObject(id: String, choices: IModel<out MutableList<out IC2Model>>): IC2Model = choices.getObject().first { it.hashCode().toString() == id }
     }
 
