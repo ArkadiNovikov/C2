@@ -7,7 +7,6 @@ package com.untitleddoc.cadencecalc.jaxrs.models;
 
 import com.google.common.collect.Lists;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
@@ -20,7 +19,7 @@ import lombok.Data;
 @XmlRootElement
 @Data
 @AllArgsConstructor
-public class Crankset implements Serializable {
+public class Crankset implements Serializable, IC2Model {
 
     private static final long serialVersionUID = -6512261512456314356L;
 
@@ -31,6 +30,7 @@ public class Crankset implements Serializable {
     public Crankset() {
 	}
 
+	@Override
     public String displayValue() {
         final List<String> stooths = Lists.transform(tooths, String::valueOf);
         return getName() + " (" + String.join("-", stooths) + ")";

@@ -19,7 +19,7 @@ import lombok.Data;
 @XmlRootElement
 @Data
 @AllArgsConstructor
-public class Sproket implements Serializable {
+public class Sproket implements Serializable, IC2Model {
 
     private static final long serialVersionUID = -6668484495934477324L;
 
@@ -29,6 +29,7 @@ public class Sproket implements Serializable {
     public Sproket() {
     }
 
+	@Override
     public String displayValue() {
         String str = "";
         str += getName();

@@ -5,6 +5,7 @@
  */
 package com.untitleddoc.cadencecalc.web.wicket.kotlin
 
+import com.untitleddoc.cadencecalc.jaxrs.models.IC2Model
 import org.apache.wicket.ajax.AjaxRequestTarget
 import org.apache.wicket.ajax.form.OnChangeAjaxBehavior
 import org.apache.wicket.markup.html.form.DropDownChoice
@@ -25,19 +26,19 @@ import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter
 */
 
 class HomePage : BasePage() {
-    private lateinit var cranks: List<Crankset>
-    private lateinit var sprokets: List<Sproket>
-    private lateinit var perimeters: List<Perimeter>
-    private lateinit var modelCrank: IModel<Crankset>
-    private lateinit var modelSproket: IModel<Sproket>
-    private lateinit var modelPerimeter: IModel<Perimeter>
+    private val cranks: List<Crankset>
+    private val sprokets: List<Sproket>
+    private val perimeters: List<Perimeter>
+    private val modelCrank: IModel<Crankset>
+    private val modelSproket: IModel<Sproket>
+    private val modelPerimeter: IModel<Perimeter>
     private val modelCadence: IModel<Int> = Model.of(80)
-    private lateinit var inputDropDownCrankset: DropDownChoice<Crankset>
-    private lateinit var inputDropDownSprocket: DropDownChoice<Sproket>
-    private lateinit var inputDropDownPerimeter: DropDownChoice<Perimeter>
-    private lateinit var inputCadence: NumberTextField<Int>
+    private val inputDropDownCrankset: DropDownChoice<Crankset>
+    private val inputDropDownSprocket: DropDownChoice<Sproket>
+    private val inputDropDownPerimeter: DropDownChoice<Perimeter>
+    private val inputCadence: NumberTextField<Int>
     private val form = Form<Void>("input")
-    private lateinit var panelSpeedData: SpeedDataPanel
+    private val panelSpeedData: SpeedDataPanel
 
     private inner class DataForm : Form<Void> {
         constructor(id: String) : super(id)
@@ -48,6 +49,12 @@ class HomePage : BasePage() {
         protected override fun onUpdate(target: AjaxRequestTarget) {
             target.add(panelSpeedData)
         }
+    }
+
+    private inner class C2ChoiceRenderer : IChoiceRenderer<IC2Model> {
+        override fun getIdValue(obj: IC2Model, index: Int): String = obj.hashCode().toString()
+        override fun getDisplayValue(obj: IC2Model): String = obj.displayValue()
+        override fun getObject(id: String, choices: IModel<out MutableList<out IC2Model>>): IC2Model = choices.getObject().first { it.hashCode().toString() == id }
     }
 
     init {
@@ -64,23 +71,9 @@ class HomePage : BasePage() {
         modelPerimeter = Model(perimeters[0])
         inputCadence = NumberTextField<Int>("cadence", modelCadence)
 
-        inputDropDownCrankset = DropDownChoice<Crankset>("crankset", modelCrank, cranks, object : IChoiceRenderer<Crankset> {
-            override fun getDisplayValue(`object`: Crankset) = `object`.displayValue()
-            override fun getIdValue(arg0: Crankset, arg1: Int): String = arg0.hashCode().toString()
-            override fun getObject(arg0: String, arg1: IModel<out List<out Crankset>>): Crankset = arg1.getObject().first { it.hashCode().toString() == arg0 }
-        })
-
-        inputDropDownSprocket = DropDownChoice("sprocket", modelSproket, sprokets, object : IChoiceRenderer<Sproket> {
-            override fun getDisplayValue(`object`: Sproket) = `object`.displayValue()
-            override fun getIdValue(arg0: Sproket, arg1: Int): String = arg0.hashCode().toString()
-            override fun getObject(arg0: String, arg1: IModel<out List<out Sproket>>): Sproket = arg1.getObject().first { it.hashCode().toString() == arg0 }
-        })
-
-        inputDropDownPerimeter = DropDownChoice("perimeter", modelPerimeter, perimeters, object : IChoiceRenderer<Perimeter> {
-            override fun getDisplayValue(`object`: Perimeter) = `object`.displayValue()
-            override fun getIdValue(arg0: Perimeter, arg1: Int): String = arg0.hashCode().toString()
-            override fun getObject(arg0: String, arg1: IModel<out List<out Perimeter>>): Perimeter = arg1.getObject().first { it.hashCode().toString() == arg0 }
-        })
+        inputDropDownCrankset = DropDownChoice<Crankset>("crankset", modelCrank, cranks, C2ChoiceRenderer())
+        inputDropDownSprocket = DropDownChoice("sprocket", modelSproket, sprokets, C2ChoiceRenderer())
+        inputDropDownPerimeter = DropDownChoice("perimeter", modelPerimeter, perimeters, C2ChoiceRenderer())
 
         panelSpeedData = SpeedDataPanel("speedData", modelCrank, modelSproket, modelPerimeter, modelCadence)
 

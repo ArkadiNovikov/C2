@@ -11,10 +11,11 @@
 
 package com.untitleddoc.cadencecalc.jaxrs.models.kotlin
 
+import com.untitleddoc.cadencecalc.jaxrs.models.IC2Model
 import java.io.Serializable
 import javax.xml.bind.annotation.XmlRootElement
 
 @XmlRootElement
-public data class Perimeter(val etrto: String, val french: String, val perimeterValue: Int) : Serializable {
-    public fun displayValue(): String = "$etrto ($french)"
+public data class Perimeter(val etrto: String, val french: String, val perimeterValue: Int) : Serializable, IC2Model {
+    public override fun displayValue(): String = "$etrto ($french)"
 }

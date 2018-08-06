@@ -1,6 +1,7 @@
 package com.untitleddoc.cadencecalc.web.wicket;
 
 import com.untitleddoc.cadencecalc.jaxrs.models.Crankset;
+import com.untitleddoc.cadencecalc.jaxrs.models.IC2Model;
 import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter;
 import com.untitleddoc.cadencecalc.jaxrs.models.Sproket;
 import java.util.List;
@@ -68,75 +69,9 @@ public class HomePage extends BasePage
 		modelSproket = new Model<>(sprokets.get(0));
 		modelPerimeter = new Model<>(perimeters.get(0));
 
-		inputDropDownCrankset = new DropDownChoice<>("crankset", modelCrank, cranks, new IChoiceRenderer<Crankset>()
-		{
-			private static final long serialVersionUID = HomePage.serialVersionUID;
-
-			@Override
-			public Object getDisplayValue(Crankset object)
-			{
-				return object.displayValue();
-			}
-
-			@Override
-			public String getIdValue(Crankset arg0, int arg1)
-			{
-				return String.valueOf(arg0.hashCode());
-			}
-
-			@Override
-			public Crankset getObject(String arg0, IModel<? extends List<? extends Crankset>> arg1)
-			{
-				return arg1.getObject().stream().filter(x -> String.valueOf(x.hashCode()).equals(arg0)).findFirst().get();
-			}
-		});
-
-		inputDropDownSprocket = new DropDownChoice<>("sprocket", modelSproket, sprokets, new IChoiceRenderer<Sproket>()
-		{
-			private static final long serialVersionUID = HomePage.serialVersionUID;
-
-			@Override
-			public Object getDisplayValue(Sproket object)
-			{
-				return object.displayValue();
-			}
-
-			@Override
-			public String getIdValue(Sproket arg0, int arg1)
-			{
-				return String.valueOf(arg0.hashCode());
-			}
-
-			@Override
-			public Sproket getObject(String arg0, IModel<? extends List<? extends Sproket>> arg1)
-			{
-				return arg1.getObject().stream().filter(x -> String.valueOf(x.hashCode()).equals(arg0)).findFirst().get();
-			}
-
-		});
-
-		inputDropDownPerimeter = new DropDownChoice<>("perimeter", modelPerimeter, perimeters, new IChoiceRenderer<Perimeter>()
-		{
-			private static final long serialVersionUID = HomePage.serialVersionUID;
-
-			@Override
-			public Object getDisplayValue(Perimeter object)
-			{
-				return object.displayValue();
-			}
-
-			@Override
-			public String getIdValue(Perimeter arg0, int arg1)
-			{
-				return String.valueOf(arg0.hashCode());
-			}
-
-			@Override
-			public Perimeter getObject(String arg0, IModel<? extends List<? extends Perimeter>> arg1)
-			{
-				return arg1.getObject().stream().filter(x -> String.valueOf(x.hashCode()).equals(arg0)).findFirst().get();
-			}
-		});
+		inputDropDownCrankset = new DropDownChoice<>("crankset", modelCrank, cranks, new C2ChoiceRenderer());
+		inputDropDownSprocket = new DropDownChoice<>("sprocket", modelSproket, sprokets, new C2ChoiceRenderer());
+		inputDropDownPerimeter = new DropDownChoice<>("perimeter", modelPerimeter, perimeters, new C2ChoiceRenderer());
 
 		inputCadence.setMinimum(0);
 		inputCadence.setMaximum(300);
@@ -156,6 +91,25 @@ public class HomePage extends BasePage
 		add(panelSpeedData);
 	}
 
+	private final class C2ChoiceRenderer implements IChoiceRenderer<IC2Model>
+	{
+
+		@Override
+		public Object getDisplayValue(IC2Model object) {
+			return object.displayValue();
+		}
+
+		@Override
+		public String getIdValue(IC2Model object, int index) {
+			return String.valueOf(object.hashCode());
+		}
+
+		@Override
+		public IC2Model getObject(String id, IModel<? extends List<? extends IC2Model>> choices) {
+			return choices.getObject().stream().filter(x -> String.valueOf(x.hashCode()).equals(id)).findFirst().get();
+		}
+	}
+	
 	private final class OnChangeLocalBehavior extends OnChangeAjaxBehavior
 	{
 
