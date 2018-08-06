@@ -26,19 +26,19 @@ import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter
 */
 
 class HomePage : BasePage() {
-    private lateinit var cranks: List<Crankset>
-    private lateinit var sprokets: List<Sproket>
-    private lateinit var perimeters: List<Perimeter>
-    private lateinit var modelCrank: IModel<Crankset>
-    private lateinit var modelSproket: IModel<Sproket>
-    private lateinit var modelPerimeter: IModel<Perimeter>
+    private val cranks: List<Crankset>
+    private val sprokets: List<Sproket>
+    private val perimeters: List<Perimeter>
+    private val modelCrank: IModel<Crankset>
+    private val modelSproket: IModel<Sproket>
+    private val modelPerimeter: IModel<Perimeter>
     private val modelCadence: IModel<Int> = Model.of(80)
-    private lateinit var inputDropDownCrankset: DropDownChoice<Crankset>
-    private lateinit var inputDropDownSprocket: DropDownChoice<Sproket>
-    private lateinit var inputDropDownPerimeter: DropDownChoice<Perimeter>
-    private lateinit var inputCadence: NumberTextField<Int>
+    private val inputDropDownCrankset: DropDownChoice<Crankset>
+    private val inputDropDownSprocket: DropDownChoice<Sproket>
+    private val inputDropDownPerimeter: DropDownChoice<Perimeter>
+    private val inputCadence: NumberTextField<Int>
     private val form = Form<Void>("input")
-    private lateinit var panelSpeedData: SpeedDataPanel
+    private val panelSpeedData: SpeedDataPanel
 
     private inner class DataForm : Form<Void> {
         constructor(id: String) : super(id)
