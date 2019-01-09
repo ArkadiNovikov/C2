@@ -54,19 +54,19 @@ class CranksetService {
         val fcm91002 = Crankset("FC-M9100-2", "Shimano", listOf(28, 38).sortedDescending())
         list.add(fcm91002)
 
-        val smcrm95 = Crankset("SM-CRM95", "Shimano", listOf(30).sortedDescending())
+        val smcrm95 = Crankset("SM-CRM95", "Shimano", listOf(30))
         list.add(smcrm95)
-        list.add(smcrm95.copy(tooths = listOf(32).sortedDescending()))
-        list.add(smcrm95.copy(tooths = listOf(34).sortedDescending()))
-        list.add(smcrm95.copy(tooths = listOf(36).sortedDescending()))
-        list.add(smcrm95.copy(tooths = listOf(38).sortedDescending()))
+        list.add(smcrm95.copy(tooths = listOf(32)))
+        list.add(smcrm95.copy(tooths = listOf(34)))
+        list.add(smcrm95.copy(tooths = listOf(36)))
+        list.add(smcrm95.copy(tooths = listOf(38)))
 
-        val force1 = Crankset("Force 1", "SRAM", listOf(38).sortedDescending())
+        val force1 = Crankset("Force 1", "SRAM", listOf(38))
         list.add(force1)
-        list.add(force1.copy(tooths = listOf(40).sortedDescending()))
-        list.add(force1.copy(tooths = listOf(42).sortedDescending()))
-        list.add(force1.copy(tooths = listOf(44).sortedDescending()))
-        list.add(force1.copy(tooths = listOf(46).sortedDescending()))
+        list.add(force1.copy(tooths = listOf(40)))
+        list.add(force1.copy(tooths = listOf(42)))
+        list.add(force1.copy(tooths = listOf(44)))
+        list.add(force1.copy(tooths = listOf(46)))
 
         return list
     }
