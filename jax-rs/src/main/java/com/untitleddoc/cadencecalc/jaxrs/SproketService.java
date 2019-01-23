@@ -128,6 +128,14 @@ public class SproketService {
 			list.add(item);
 		}
 		{
+			final val item = new Sproket();
+			item.setName("XG-1299 Eagle");
+			final val tooths = Arrays.asList(10d, 12d, 14d, 16d, 18d, 21d, 24d, 28d, 32d, 36d, 42d, 50d);
+			tooths.sort(Comparator.naturalOrder());
+			item.setTooths(tooths);
+			list.add(item);
+		}
+		{
 			final val cogT = 13;
 			final val item = new Sproket();
 			item.setName("SPEEDHUB 500/14 " + cogT + "t");
