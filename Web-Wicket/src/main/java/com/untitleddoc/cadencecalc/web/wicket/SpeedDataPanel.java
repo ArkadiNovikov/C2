@@ -20,6 +20,7 @@ import com.untitleddoc.cadencecalc.jaxrs.models.Crankset;
 import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter;
 import com.untitleddoc.cadencecalc.jaxrs.models.Sproket;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.List;
@@ -99,7 +100,7 @@ public final class SpeedDataPanel extends Panel
 			@Override
 			protected void populateItem(final ListItem<Double> item)
 			{
-				item.add(new Label("header", new BigDecimal(item.getModelObject()).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue()).setOutputMarkupId(true));
+				item.add(new Label("header", new BigDecimal(item.getModelObject()).setScale(1, RoundingMode.HALF_UP).doubleValue()).setOutputMarkupId(true));
 			}
 		};
 		headers.setOutputMarkupId(true);

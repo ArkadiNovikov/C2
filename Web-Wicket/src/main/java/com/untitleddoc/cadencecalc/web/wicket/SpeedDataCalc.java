@@ -19,7 +19,7 @@ import com.untitleddoc.cadencecalc.jaxrs.models.Crankset;
 import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter;
 import com.untitleddoc.cadencecalc.jaxrs.models.Sproket;
 import java.math.BigDecimal;
-import java.util.stream.Stream;
+import java.math.RoundingMode;
 import lombok.Data;
 import lombok.NonNull;
 
@@ -49,7 +49,7 @@ public class SpeedDataCalc
 
 			data[i] = sproket.getTooths().stream().mapToDouble(
 					s -> new BigDecimal(crankTooth / s * cadence * perimeter.getPerimeterValue() * 60 / 1000 / 1000)
-					.setScale(1, BigDecimal.ROUND_HALF_UP)
+					.setScale(1, RoundingMode.HALF_UP)
 					.doubleValue())
 					.toArray();
 		}
