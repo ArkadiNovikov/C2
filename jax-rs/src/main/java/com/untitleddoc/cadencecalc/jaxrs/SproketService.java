@@ -121,6 +121,30 @@ public class SproketService {
 		}
 		{
 			final val item = new Sproket();
+			item.setName("Red AXS");
+			final val tooths = Arrays.asList(10d, 11d, 12d, 13d, 14d, 15d, 16d, 17d, 19d, 21d, 23d, 26d);
+			tooths.sort(Comparator.naturalOrder());
+			item.setTooths(tooths);
+			list.add(item);
+		}
+		{
+			final val item = new Sproket();
+			item.setName("Red AXS");
+			final val tooths = Arrays.asList(10d, 11d, 12d, 13d, 14d, 15d, 16d, 17d, 19d, 21d, 24d, 28d);
+			tooths.sort(Comparator.naturalOrder());
+			item.setTooths(tooths);
+			list.add(item);
+		}
+		{
+			final val item = new Sproket();
+			item.setName("Red AXS");
+			final val tooths = Arrays.asList(10d, 11d, 12d, 13d, 14d, 15d, 17d, 19d, 21d, 24d, 28d, 33d);
+			tooths.sort(Comparator.naturalOrder());
+			item.setTooths(tooths);
+			list.add(item);
+		}
+		{
+			final val item = new Sproket();
 			item.setName("XG-1180");
 			final val tooths = Arrays.asList(10d, 12d, 14d, 16d, 18d, 21d, 24d, 28d, 32d, 36d, 42d);
 			tooths.sort(Comparator.naturalOrder());

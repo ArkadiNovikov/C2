@@ -181,6 +181,24 @@ public class CranksetService
 			list.add(item);
 		}
 		{
+			final List<Integer> tooths = Arrays.asList(50,37);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("Red AXS", "SRAM", tooths);
+			list.add(item);
+		}
+		{
+			final List<Integer> tooths = Arrays.asList(48,35);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("Red AXS", "SRAM", tooths);
+			list.add(item);
+		}
+		{
+			final List<Integer> tooths = Arrays.asList(46,33);
+			tooths.sort(Comparator.reverseOrder());
+			final Crankset item = new Crankset("Red AXS", "SRAM", tooths);
+			list.add(item);
+		}
+		{
 			final List<Integer> tooths = Arrays.asList(38);
 			tooths.sort(Comparator.reverseOrder());
 			final Crankset item = new Crankset("Force 1", "SRAM", tooths);
