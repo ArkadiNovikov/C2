@@ -9,6 +9,7 @@ import com.untitleddoc.cadencecalc.jaxrs.models.Crankset
 import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter
 import com.untitleddoc.cadencecalc.jaxrs.models.Sproket
 import java.math.BigDecimal
+import java.math.RoundingMode
 import org.apache.wicket.markup.html.basic.Label
 import org.apache.wicket.markup.html.list.ListItem
 import org.apache.wicket.markup.html.list.ListView
@@ -49,7 +50,7 @@ class SpeedDataPanel(id: String, modelCrankset: IModel<Crankset>, modelSproket: 
     }
     private val headers: ListView<Double> = object : ListView<Double>("headers", modelSproketTooths) {
         override protected fun populateItem(item: ListItem<Double>) {
-            item.add(Label("header", BigDecimal(item.getModelObject()).setScale(1, BigDecimal.ROUND_HALF_UP).toString()).setOutputMarkupId(true))
+            item.add(Label("header", BigDecimal(item.getModelObject()).setScale(1, RoundingMode.HALF_UP).toString()).setOutputMarkupId(true))
         }
     }
     private val dataList: ListView<Pair<Int, List<Double>>> = object : ListView<Pair<Int, List<Double>>>("dataBodyRow", modelDataTable) {

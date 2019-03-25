@@ -31,183 +31,201 @@ public class CranksetService
 	{
 		final List<Crankset> list = new ArrayList<>();
 		{
-			final List<Integer> tooths = Arrays.asList(34, 50);
+			final var tooths = Arrays.asList(34, 50);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("FC-9000", "Shimano", tooths);
+			final var item = new Crankset("FC-9000", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(36, 52);
+			final var tooths = Arrays.asList(36, 52);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("FC-9000", "Shimano", tooths);
+			final var item = new Crankset("FC-9000", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(38, 52);
+			final var tooths = Arrays.asList(38, 52);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("FC-9000", "Shimano", tooths);
+			final var item = new Crankset("FC-9000", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(39, 53);
+			final var tooths = Arrays.asList(39, 53);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("FC-9000", "Shimano", tooths);
+			final var item = new Crankset("FC-9000", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(36, 46);
+			final var tooths = Arrays.asList(36, 46);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("FC-6800", "Shimano", tooths);
+			final var item = new Crankset("FC-6800", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(36, 48);
+			final var tooths = Arrays.asList(36, 48);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("OX901D", "Sugino", tooths);
+			final var item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(34, 48);
+			final var tooths = Arrays.asList(34, 48);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("OX901D", "Sugino", tooths);
+			final var item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(32, 48);
+			final var tooths = Arrays.asList(32, 48);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("OX901D", "Sugino", tooths);
+			final var item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(34, 46);
+			final var tooths = Arrays.asList(34, 46);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("OX901D", "Sugino", tooths);
+			final var item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(32, 46);
+			final var tooths = Arrays.asList(32, 46);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("OX901D", "Sugino", tooths);
+			final var item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(30, 46);
+			final var tooths = Arrays.asList(30, 46);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("OX901D", "Sugino", tooths);
+			final var item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(36, 44);
+			final var tooths = Arrays.asList(36, 44);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("OX901D", "Sugino", tooths);
+			final var item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(34, 44);
+			final var tooths = Arrays.asList(34, 44);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("OX901D", "Sugino", tooths);
+			final var item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(32, 44);
+			final var tooths = Arrays.asList(32, 44);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("OX901D", "Sugino", tooths);
+			final var item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(30, 44);
+			final var tooths = Arrays.asList(30, 44);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("OX901D", "Sugino", tooths);
+			final var item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(26, 36, 48);
+			final var tooths = Arrays.asList(26, 36, 48);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("ALPINA2 Triple", "Sugino", tooths);
+			final var item = new Crankset("ALPINA2 Triple", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(26, 36, 46);
+			final var tooths = Arrays.asList(26, 36, 46);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("ALPINA2 Triple", "Sugino", tooths);
+			final var item = new Crankset("ALPINA2 Triple", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(22, 33, 40);
+			final var tooths = Arrays.asList(22, 33, 40);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("FC-M9000-3", "Shimano", tooths);
+			final var item = new Crankset("FC-M9000-3", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(28, 38);
+			final var tooths = Arrays.asList(28, 38);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("FC-M9100-2", "Shimano", tooths);
+			final var item = new Crankset("FC-M9100-2", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(30);
+			final var tooths = Arrays.asList(30);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("SM-CRM95", "Shimano", tooths);
+			final var item = new Crankset("SM-CRM95", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(30);
+			final var tooths = Arrays.asList(30);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("SM-CRM95", "Shimano", tooths);
+			final var item = new Crankset("SM-CRM95", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(32);
+			final var tooths = Arrays.asList(32);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("SM-CRM95", "Shimano", tooths);
+			final var item = new Crankset("SM-CRM95", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(34);
+			final var tooths = Arrays.asList(34);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("SM-CRM95", "Shimano", tooths);
+			final var item = new Crankset("SM-CRM95", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(36);
+			final var tooths = Arrays.asList(36);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("SM-CRM95", "Shimano", tooths);
+			final var item = new Crankset("SM-CRM95", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(38);
+			final var tooths = Arrays.asList(38);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("SM-CRM95", "Shimano", tooths);
+			final var item = new Crankset("SM-CRM95", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(38);
+			final var tooths = Arrays.asList(50,37);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("Force 1", "SRAM", tooths);
+			final var item = new Crankset("Red AXS", "SRAM", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(40);
+			final var tooths = Arrays.asList(48,35);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("Force 1", "SRAM", tooths);
+			final var item = new Crankset("Red AXS", "SRAM", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(42);
+			final var tooths = Arrays.asList(46,33);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("Force 1", "SRAM", tooths);
+			final var item = new Crankset("Red AXS", "SRAM", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(44);
+			final var tooths = Arrays.asList(38);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("Force 1", "SRAM", tooths);
+			final var item = new Crankset("Force 1", "SRAM", tooths);
 			list.add(item);
 		}
 		{
-			final List<Integer> tooths = Arrays.asList(46);
+			final var tooths = Arrays.asList(40);
 			tooths.sort(Comparator.reverseOrder());
-			final Crankset item = new Crankset("Force 1", "SRAM", tooths);
+			final var item = new Crankset("Force 1", "SRAM", tooths);
+			list.add(item);
+		}
+		{
+			final var tooths = Arrays.asList(42);
+			tooths.sort(Comparator.reverseOrder());
+			final var item = new Crankset("Force 1", "SRAM", tooths);
+			list.add(item);
+		}
+		{
+			final var tooths = Arrays.asList(44);
+			tooths.sort(Comparator.reverseOrder());
+			final var item = new Crankset("Force 1", "SRAM", tooths);
+			list.add(item);
+		}
+		{
+			final var tooths = Arrays.asList(46);
+			tooths.sort(Comparator.reverseOrder());
+			final var item = new Crankset("Force 1", "SRAM", tooths);
 			list.add(item);
 		}
 		return list;

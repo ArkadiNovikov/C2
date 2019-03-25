@@ -6,6 +6,7 @@
 package com.untitleddoc.cadencecalc.web.wicket.kotlin
 
 import java.math.BigDecimal
+import java.math.RoundingMode
 
 /*
 
@@ -18,7 +19,7 @@ public data class SpeedDataCalc(val cranksetTooths: Iterable<Int>, val sproketTo
         var data: MutableList<List<Double>> = mutableListOf()
 
         for (crank in cranksetTooths) {
-            var row = sproketTooths.map { BigDecimal(crank / it * cadence.toInt() * perimeter * 60 / 1000 / 1000).setScale(1, BigDecimal.ROUND_HALF_UP).toDouble() }
+            var row = sproketTooths.map { BigDecimal(crank / it * cadence.toInt() * perimeter * 60 / 1000 / 1000).setScale(1, RoundingMode.HALF_UP).toDouble() }
             data.add(row.toList())
         }
 
