@@ -46,7 +46,7 @@ public class CranksetClient {
     }
 
     public List<Crankset> getCrankset() throws ClientErrorException {
-        WebTarget resource = webTarget;
+        final var resource = webTarget;
         return resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(new GenericType<List<Crankset>>(){});
     }
 

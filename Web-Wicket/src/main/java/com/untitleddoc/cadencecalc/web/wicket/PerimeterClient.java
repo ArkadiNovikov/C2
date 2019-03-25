@@ -46,7 +46,7 @@ public class PerimeterClient {
     }
 
     public List<Perimeter> getPerimeter() throws ClientErrorException {
-        WebTarget resource = webTarget;
+        final var resource = webTarget;
         return resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(new GenericType<List<Perimeter>>(){});
     }
 

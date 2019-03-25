@@ -61,14 +61,14 @@ public final class SpeedDataPanel extends Panel
 		@Override
 		protected List<AbstractMap.SimpleEntry<Integer, List<Double>>> load()
 		{
-			final SpeedDataCalc data = new SpeedDataCalc(modelCrank.getObject(), modelSproket.getObject(), modelPerimeter.getObject(), modelCadence.getObject());
-			final double[][] calcData = data.getResult();
+			final var data = new SpeedDataCalc(modelCrank.getObject(), modelSproket.getObject(), modelPerimeter.getObject(), modelCadence.getObject());
+			final var calcData = data.getResult();
 
 			final List<AbstractMap.SimpleEntry<Integer, List<Double>>> result = new ArrayList<>();
 			for (int i = 0; i < calcData.length; i++)
 			{
-				final Integer key = modelCrank.getObject().getTooths().get(i);
-				final List<Double> value = new ArrayList<>(calcData[i].length);
+				final var key = modelCrank.getObject().getTooths().get(i);
+				final var value = new ArrayList<>(calcData[i].length);
 				for (final double d : calcData[i])
 				{
 					value.add(d);
@@ -113,10 +113,10 @@ public final class SpeedDataPanel extends Panel
 			@Override
 			protected void populateItem(final ListItem<AbstractMap.SimpleEntry<Integer, List<Double>>> item)
 			{
-				final AbstractMap.SimpleEntry<Integer, List<Double>> i = item.getModelObject();
+				final var entry = item.getModelObject();
 
-				item.add(new Label("dataBodyRowHeader", i.getKey()));
-				item.add(new ListView<Double>("dataBodyColum", i.getValue())
+				item.add(new Label("dataBodyRowHeader", entry.getKey()));
+				item.add(new ListView<Double>("dataBodyColum", entry.getValue())
 				{
 					private static final long serialVersionUID = SpeedDataPanel.serialVersionUID;
 
