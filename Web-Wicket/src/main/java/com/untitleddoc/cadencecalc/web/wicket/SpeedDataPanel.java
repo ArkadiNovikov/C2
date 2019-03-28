@@ -68,7 +68,7 @@ public final class SpeedDataPanel extends Panel
 			for (int i = 0; i < calcData.length; i++)
 			{
 				final var key = modelCrank.getObject().getTooths().get(i);
-				final var value = new ArrayList<>(calcData[i].length);
+				final var value = new ArrayList<Double>(calcData[i].length);
 				for (final double d : calcData[i])
 				{
 					value.add(d);

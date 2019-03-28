@@ -11,8 +11,8 @@
 		<wicket.version>8.3.0</wicket.version>  
 		<kotlin.version>1.3.21</kotlin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	 <maven.compiler.source>11</maven.compiler.source>
-	 <maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>12</maven.compiler.source>
+		<maven.compiler.target>12</maven.compiler.target>
 	</properties>  
 	<modules> 
 		<module>Web-Wicket</module>  
