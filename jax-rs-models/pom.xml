@@ -92,6 +92,9 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<showDeprecation>true</showDeprecation>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
