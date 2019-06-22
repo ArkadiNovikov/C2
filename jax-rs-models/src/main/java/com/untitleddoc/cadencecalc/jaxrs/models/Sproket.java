@@ -7,6 +7,7 @@ package com.untitleddoc.cadencecalc.jaxrs.models;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
@@ -34,9 +35,9 @@ public class Sproket implements Serializable, IC2Model {
         String str = "";
         str += getName();
         str += " (";
-        str += new BigDecimal(tooths.get(0)).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+        str += new BigDecimal(tooths.get(0)).setScale(1, RoundingMode.HALF_UP).doubleValue();
         str += "-";
-        str += new BigDecimal(tooths.get(tooths.size()-1)).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+        str += new BigDecimal(tooths.get(tooths.size()-1)).setScale(1, RoundingMode.HALF_UP).doubleValue();
         str += ")";
         return str;
     }

@@ -46,7 +46,7 @@ public class SproketClient {
     }
 
     public List<Sproket> getSproket() throws ClientErrorException {
-        WebTarget resource = webTarget;
+        final var resource = webTarget;
         return resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(new GenericType<List<Sproket>>(){});
     }
 

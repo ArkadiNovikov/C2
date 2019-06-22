@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="jax-rs" />
+        <module name="jax-rs-kotlin" />
         <module name="jax-rs-models" />
-        <module name="Web-JEE" />
         <module name="Web-Wicket" />
+        <module name="jax-rs" />
         <module name="Web-Wicket-Kotlin" />
+        <module name="Web-JEE" />
       </profile>
     </annotationProcessing>
   </component>

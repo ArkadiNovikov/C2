@@ -57,9 +57,9 @@ public class HomePage extends BasePage
 	{
 		super();
 
-		final CranksetClient cranksetClient = new CranksetClient();
-		final SproketClient sproketClient = new SproketClient();
-		final PerimeterClient perimeterClient = new PerimeterClient();
+		final var cranksetClient = new CranksetClient();
+		final var sproketClient = new SproketClient();
+		final var perimeterClient = new PerimeterClient();
 
 		cranks = cranksetClient.getCrankset();
 		sprokets = sproketClient.getSproket();
