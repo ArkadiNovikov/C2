@@ -167,7 +167,12 @@
 				<groupId>org.eclipse.jetty</groupId>  
 				<artifactId>jetty-jmx</artifactId>  
 				<version>${jetty.version}</version>  
-			</dependency> 
+			</dependency>
+			<dependency>
+				<groupId>io.thorntail</groupId>
+				<artifactId>thorntail</artifactId>
+				<version>2.4.0.Final</version>
+			</dependency>
 		</dependencies> 
 	</dependencyManagement>
 	<dependencies> 
@@ -176,7 +181,7 @@
 			<artifactId>kotlin-stdlib</artifactId>  
 		</dependency> 
 	</dependencies>  
-	<build> 
+	<build>
 		<pluginManagement>
 			<plugins>
 				<plugin>

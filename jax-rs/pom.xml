@@ -33,7 +33,7 @@
 		<dependency>
 			<groupId>org.glassfish.metro</groupId>
 			<artifactId>webservices-rt</artifactId>
-			<version>2.4.0</version>
+			<version>2.4.3</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -49,8 +49,21 @@
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-web-api</artifactId>
-			<version>7.0</version>
+			<version>8.0.1</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.thorntail</groupId>
+			<artifactId>jaxrs</artifactId>
+			<version>2.4.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-webapp</artifactId>
 		</dependency>
 	</dependencies>
 
@@ -106,9 +119,70 @@
 				<configuration>
 					<!--<jbossHome>${wildflyPath}</jbossHome>-->
 					<!--<serverConfig>standalone.xml</serverConfig>-->
-					<port>9090</port>
+					<javaOpts>-Djboss.http.port=4444</javaOpts>
+					<wildfly.startupTimeout>120</wildfly.startupTimeout>
 				</configuration>
-			</plugin>		
+			</plugin>
+			<plugin>
+				<!--  -->
+				<groupId>io.thorntail</groupId>
+				<artifactId>thorntail-maven-plugin</artifactId>
+				<version>2.4.0.Final</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>package</goal>
+						</goals>
+						<configuration>
+							<mode>fat</mode>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<properties>
+					</properties>
+				</configuration>
+			</plugin>
+			<!--			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<configuration>
+					<httpConnector>
+						<port>4444</port>
+					</httpConnector>
+				</configuration>
+			</plugin>-->
+			<!--			<plugin>
+				<groupId>fish.payara.maven.plugins</groupId>
+				<artifactId>payara-micro-maven-plugin</artifactId>
+				<version>1.0.5</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>bundle</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<appendSystemProperties>true</appendSystemProperties>
+					<payaraVersion>5.192</payaraVersion>
+					<useUberJar>true</useUberJarar>
+					<systemProperties>
+						<property>
+							<name>payaramicro.port</name>
+							<value>4444</value>
+						</property>
+					</systemProperties>
+					<deployArtifacts>
+						<artifactItem>
+							<groupId>${project.groupId}</groupId>
+							<artifactId>${project.artifactId}</artifactId>
+							<version>${project.version}</version>
+							<type>war</type>
+						</artifactItem>
+					</deployArtifacts>			
+				</configuration>
+			</plugin>-->
 		</plugins>
 	</build>
 
