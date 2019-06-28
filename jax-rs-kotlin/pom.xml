@@ -88,6 +88,17 @@
 					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>2.0.1.Final</version>
+				<configuration>
+					<!--<jbossHome>${wildflyPath}</jbossHome>-->
+					<!--<serverConfig>standalone.xml</serverConfig>-->
+					<javaOpts>-Djboss.http.port=4444</javaOpts>
+					<wildfly.startupTimeout>120</wildfly.startupTimeout>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
