@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.untitleddoc.cadencecalc.web.wicket;
+package com.untitleddoc.cadencecalc.web.wicket.client;
 
 import com.untitleddoc.cadencecalc.jaxrs.models.Sproket;
 import java.util.List;
@@ -34,7 +34,7 @@ import javax.ws.rs.core.GenericType;
  *
  * @author Novikov
  */
-public class SproketClient {
+public class SproketClient implements IJaxrsClient {
 
     private final WebTarget webTarget;
     private final Client client;
@@ -45,7 +45,8 @@ public class SproketClient {
         webTarget = client.target(BASE_URI).path("sproket");
     }
 
-    public List<Sproket> getSproket() throws ClientErrorException {
+	@Override
+    public List<Sproket> get() throws ClientErrorException {
         final var resource = webTarget;
         return resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(new GenericType<List<Sproket>>(){});
     }

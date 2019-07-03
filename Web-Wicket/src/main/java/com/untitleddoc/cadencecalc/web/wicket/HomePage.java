@@ -1,5 +1,8 @@
 package com.untitleddoc.cadencecalc.web.wicket;
 
+import com.untitleddoc.cadencecalc.web.wicket.client.CranksetClient;
+import com.untitleddoc.cadencecalc.web.wicket.client.PerimeterClient;
+import com.untitleddoc.cadencecalc.web.wicket.client.SproketClient;
 import com.untitleddoc.cadencecalc.jaxrs.models.Crankset;
 import com.untitleddoc.cadencecalc.jaxrs.models.IC2Model;
 import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter;
@@ -61,9 +64,9 @@ public class HomePage extends BasePage
 		final var sproketClient = new SproketClient();
 		final var perimeterClient = new PerimeterClient();
 
-		cranks = cranksetClient.getCrankset();
-		sprokets = sproketClient.getSproket();
-		perimeters = perimeterClient.getPerimeter();
+		cranks = cranksetClient.get();
+		sprokets = sproketClient.get();
+		perimeters = perimeterClient.get();
 
 		modelCrank = new Model<>(cranks.get(0));
 		modelSproket = new Model<>(sprokets.get(0));

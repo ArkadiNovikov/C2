@@ -228,8 +228,7 @@
 			</plugin>  
 			<plugin> 
 				<groupId>org.eclipse.jetty</groupId>  
-				<artifactId>jetty-maven-plugin</artifactId>  
-				<version>${jetty.version}</version>  
+				<artifactId>jetty-maven-plugin</artifactId>
 				<configuration> 
 					<systemProperties> 
 						<systemProperty> 
