@@ -100,6 +100,26 @@
 				<version>28.0-jre</version>
 			</dependency>  
 			<!-- LOGGING DEPENDENCIES - LOG -->  
+			<dependency>
+				<groupId>com.google.flogger</groupId>
+				<artifactId>flogger</artifactId>
+				<version>0.4</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.flogger</groupId>
+				<artifactId>flogger-log4j-backend</artifactId>
+				<version>0.4</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.flogger</groupId>
+				<artifactId>flogger-system-backend</artifactId>
+				<version>0.4</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.flogger</groupId>
+				<artifactId>flogger-slf4j-backend</artifactId>
+				<version>0.4</version>
+			</dependency>
 			<dependency> 
 				<groupId>org.slf4j</groupId>  
 				<artifactId>slf4j-api</artifactId>  
