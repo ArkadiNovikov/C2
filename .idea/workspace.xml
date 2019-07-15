@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5475496-c6aa-4f56-ab8c-b03db1a24549" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jax-rs-models/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jax-rs-models/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jax-rs/nbactions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jax-rs/nbactions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jax-rs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jax-rs/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Web-JEE/target/" />
     <ignored path="$PROJECT_DIR$/Web-Wicket-Kotlin/target/" />
@@ -18,8 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -80,6 +82,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -131,7 +134,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -191,7 +193,7 @@
       <window_info id="Capture Tool" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.19829424" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.20042644" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info id="Maven Projects" order="6" weight="0.18645833" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -216,6 +218,9 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jax-rs-models/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/jax-rs-models/src/main/java/com/untitleddoc/cadencecalc/jaxrs/models/Crankset.java">

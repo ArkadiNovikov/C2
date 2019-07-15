@@ -17,6 +17,8 @@
 	<properties>
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>12</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
 		<wildflyPath>D:\bin\wildfly-10.1.0.Final</wildflyPath>
 	</properties>
     
@@ -74,7 +76,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>12</source>
-					<target>12</target>
+					<target>8</target>
 					<compilerArguments>
 						<endorseddirs>${endorsed.dir}</endorseddirs>
 					</compilerArguments>
@@ -152,7 +154,7 @@
 					</httpConnector>
 				</configuration>
 			</plugin>-->
-			<!--			<plugin>
+			<plugin>
 				<groupId>fish.payara.maven.plugins</groupId>
 				<artifactId>payara-micro-maven-plugin</artifactId>
 				<version>1.0.5</version>
@@ -165,8 +167,9 @@
 				</executions>
 				<configuration>
 					<appendSystemProperties>true</appendSystemProperties>
-					<payaraVersion>5.192</payaraVersion>
-					<useUberJar>true</useUberJarar>
+					<!--<payaraVersion>5.192</payaraVersion>-->
+					<useUberJar>true</useUberJar>
+					<javaPath>${env.JAVA8_HOME}\bin\java.exe</javaPath>
 					<systemProperties>
 						<property>
 							<name>payaramicro.port</name>
@@ -182,7 +185,7 @@
 						</artifactItem>
 					</deployArtifacts>			
 				</configuration>
-			</plugin>-->
+			</plugin>
 		</plugins>
 	</build>
 

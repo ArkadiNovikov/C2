@@ -15,4 +15,11 @@
       </profile>
     </annotationProcessing>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Web-JEE" options="-endorseddirs D:\Users\kisiy\Documents\NetBeansProjects\C2\Web-JEE\target/endorsed" />
+      <module name="Web-Wicket-Kotlin" options="-endorseddirs D:\Users\kisiy\Documents\NetBeansProjects\C2\Web-Wicket-Kotlin\target/endorsed" />
+      <module name="jax-rs" options="-endorseddirs D:\Users\kisiy\Documents\NetBeansProjects\C2\jax-rs\target/endorsed" />
+    </option>
+  </component>
 </project>
