@@ -15,6 +15,8 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import lombok.var;
+import lombok.val;
 
 /**
  *
@@ -31,201 +33,201 @@ public class CranksetService
 	{
 		final List<Crankset> list = new ArrayList<>();
 		{
-			final var tooths = Arrays.asList(34, 50);
+			val tooths = Arrays.asList(34, 50);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("FC-9000", "Shimano", tooths);
+			val item = new Crankset("FC-9000", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(36, 52);
+			val tooths = Arrays.asList(36, 52);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("FC-9000", "Shimano", tooths);
+			val item = new Crankset("FC-9000", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(38, 52);
+			val tooths = Arrays.asList(38, 52);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("FC-9000", "Shimano", tooths);
+			val item = new Crankset("FC-9000", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(39, 53);
+			val tooths = Arrays.asList(39, 53);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("FC-9000", "Shimano", tooths);
+			val item = new Crankset("FC-9000", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(36, 46);
+			val tooths = Arrays.asList(36, 46);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("FC-6800", "Shimano", tooths);
+			val item = new Crankset("FC-6800", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(36, 48);
+			val tooths = Arrays.asList(36, 48);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("OX901D", "Sugino", tooths);
+			val item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(34, 48);
+			val tooths = Arrays.asList(34, 48);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("OX901D", "Sugino", tooths);
+			val item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(32, 48);
+			val tooths = Arrays.asList(32, 48);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("OX901D", "Sugino", tooths);
+			val item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(34, 46);
+			val tooths = Arrays.asList(34, 46);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("OX901D", "Sugino", tooths);
+			val item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(32, 46);
+			val tooths = Arrays.asList(32, 46);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("OX901D", "Sugino", tooths);
+			val item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(30, 46);
+			val tooths = Arrays.asList(30, 46);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("OX901D", "Sugino", tooths);
+			val item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(36, 44);
+			val tooths = Arrays.asList(36, 44);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("OX901D", "Sugino", tooths);
+			val item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(34, 44);
+			val tooths = Arrays.asList(34, 44);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("OX901D", "Sugino", tooths);
+			val item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(32, 44);
+			val tooths = Arrays.asList(32, 44);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("OX901D", "Sugino", tooths);
+			val item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(30, 44);
+			val tooths = Arrays.asList(30, 44);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("OX901D", "Sugino", tooths);
+			val item = new Crankset("OX901D", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(26, 36, 48);
+			val tooths = Arrays.asList(26, 36, 48);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("ALPINA2 Triple", "Sugino", tooths);
+			val item = new Crankset("ALPINA2 Triple", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(26, 36, 46);
+			val tooths = Arrays.asList(26, 36, 46);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("ALPINA2 Triple", "Sugino", tooths);
+			val item = new Crankset("ALPINA2 Triple", "Sugino", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(22, 33, 40);
+			val tooths = Arrays.asList(22, 33, 40);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("FC-M9000-3", "Shimano", tooths);
+			val item = new Crankset("FC-M9000-3", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(28, 38);
+			val tooths = Arrays.asList(28, 38);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("FC-M9100-2", "Shimano", tooths);
+			val item = new Crankset("FC-M9100-2", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(30);
+			val tooths = Arrays.asList(30);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("SM-CRM95", "Shimano", tooths);
+			val item = new Crankset("SM-CRM95", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(30);
+			val tooths = Arrays.asList(30);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("SM-CRM95", "Shimano", tooths);
+			val item = new Crankset("SM-CRM95", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(32);
+			val tooths = Arrays.asList(32);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("SM-CRM95", "Shimano", tooths);
+			val item = new Crankset("SM-CRM95", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(34);
+			val tooths = Arrays.asList(34);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("SM-CRM95", "Shimano", tooths);
+			val item = new Crankset("SM-CRM95", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(36);
+			val tooths = Arrays.asList(36);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("SM-CRM95", "Shimano", tooths);
+			val item = new Crankset("SM-CRM95", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(38);
+			val tooths = Arrays.asList(38);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("SM-CRM95", "Shimano", tooths);
+			val item = new Crankset("SM-CRM95", "Shimano", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(50,37);
+			val tooths = Arrays.asList(50,37);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("Red AXS", "SRAM", tooths);
+			val item = new Crankset("Red AXS", "SRAM", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(48,35);
+			val tooths = Arrays.asList(48,35);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("Red AXS", "SRAM", tooths);
+			val item = new Crankset("Red AXS", "SRAM", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(46,33);
+			val tooths = Arrays.asList(46,33);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("Red AXS", "SRAM", tooths);
+			val item = new Crankset("Red AXS", "SRAM", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(38);
+			val tooths = Arrays.asList(38);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("Force 1", "SRAM", tooths);
+			val item = new Crankset("Force 1", "SRAM", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(40);
+			val tooths = Arrays.asList(40);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("Force 1", "SRAM", tooths);
+			val item = new Crankset("Force 1", "SRAM", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(42);
+			val tooths = Arrays.asList(42);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("Force 1", "SRAM", tooths);
+			val item = new Crankset("Force 1", "SRAM", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(44);
+			val tooths = Arrays.asList(44);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("Force 1", "SRAM", tooths);
+			val item = new Crankset("Force 1", "SRAM", tooths);
 			list.add(item);
 		}
 		{
-			final var tooths = Arrays.asList(46);
+			val tooths = Arrays.asList(46);
 			tooths.sort(Comparator.reverseOrder());
-			final var item = new Crankset("Force 1", "SRAM", tooths);
+			val item = new Crankset("Force 1", "SRAM", tooths);
 			list.add(item);
 		}
 		return list;
