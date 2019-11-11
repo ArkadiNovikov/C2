@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-wildfly:run</actionName>
+            <displayName>wildfly:run</displayName>
+            <goals>
+                <goal>wildfly:run</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-payara-micro:start</actionName>
+            <displayName>payara-micro:start</displayName>
+            <goals>
+                <goal>payara-micro:start</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-payara-micro:bundle</actionName>
+            <displayName>payara-micro:bundle</displayName>
+            <goals>
+                <goal>payara-micro:bundle</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-payara-micro:stop</actionName>
+            <displayName>payara-micro:stop</displayName>
+            <goals>
+                <goal>payara-micro:stop</goal>
+            </goals>
+        </action>
+    </actions>
