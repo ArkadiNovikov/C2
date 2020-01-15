@@ -216,27 +216,37 @@
         {
             "Name": "Force 1",
             "Manufacturer": "SRAM",
-            "Tooths": [38]
+            "Tooths": [
+                38
+            ]
         },
         {
             "Name": "Force 1",
             "Manufacturer": "SRAM",
-            "Tooths": [40]
+            "Tooths": [
+                40
+            ]
         },
         {
             "Name": "Force 1",
             "Manufacturer": "SRAM",
-            "Tooths": [42]
+            "Tooths": [
+                42
+            ]
         },
         {
             "Name": "Force 1",
             "Manufacturer": "SRAM",
-            "Tooths": [44]
+            "Tooths": [
+                44
+            ]
         },
         {
             "Name": "Force 1",
             "Manufacturer": "SRAM",
-            "Tooths": [46]
+            "Tooths": [
+                46
+            ]
         }
     ]
 }
