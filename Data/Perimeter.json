@@ -1,0 +1,48 @@
+{
+    "Perimeters": [{
+            "ETRTO": "23-622",
+            "French": "700*23C",
+            "Value": 2096
+        },
+        {
+            "ETRTO": "25-622",
+            "French": "700*25C",
+            "Value": 2105
+        },
+        {
+            "ETRTO": "28-622",
+            "French": "700*28C",
+            "Value": 2136
+        },
+        {
+            "ETRTO": "25-584",
+            "French": "650*25B",
+            "Value": 1991
+        },
+        {
+            "ETRTO": "28-584",
+            "French": "650*28B",
+            "Value": 2010
+        },
+        {
+            "ETRTO": "40-584",
+            "French": "27.5*1.50",
+            "Value": 2079
+        },
+        {
+            "ETRTO": "47-584",
+            "French": "650*47B",
+            "Value": 2136
+        },
+        {
+            "ETRTO": "23-571",
+            "French": "650x23C",
+            "Value": 1944
+        },
+        {
+            "ETRTO": "25-571",
+            "French": "650x25C",
+            "Value": 1952
+        }
+    ]
+}
