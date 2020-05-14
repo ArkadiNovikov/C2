@@ -61,10 +61,13 @@ class CranksetService {
         list.add(smcrm95.copy(tooths = listOf(36)))
         list.add(smcrm95.copy(tooths = listOf(38)))
 
-        val RedAxs = Crankset("Red AXS", "SRAM", listOf(50,37).sortedDescending())
-        list.add(RedAxs)
-        list.add(RedAxs.copy(tooths = listOf(48,35).sortedDescending()))
-        list.add(RedAxs.copy(tooths = listOf(46,33).sortedDescending()))
+        val redAxs = Crankset("Red AXS", "SRAM", listOf(50,37).sortedDescending())
+        list.add(redAxs)
+        list.add(redAxs.copy(tooths = listOf(48,35).sortedDescending()))
+        list.add(redAxs.copy(tooths = listOf(46,33).sortedDescending()))
+
+        val forceAxs = Crankset("Force AXS", "SRAM", listOf(43,30).sortedDescending())
+        list.add(forceAxs)
 
         val force1 = Crankset("Force 1", "SRAM", listOf(38))
         list.add(force1)
