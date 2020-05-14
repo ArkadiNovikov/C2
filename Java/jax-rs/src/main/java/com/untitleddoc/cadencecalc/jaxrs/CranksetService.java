@@ -201,6 +201,12 @@ public class CranksetService
 			list.add(item);
 		}
 		{
+			val tooths = Arrays.asList(43,30);
+			tooths.sort(Comparator.reverseOrder());
+			val item = new Crankset("Force AXS", "SRAM", tooths);
+			list.add(item);
+		}
+		{
 			val tooths = Arrays.asList(38);
 			tooths.sort(Comparator.reverseOrder());
 			val item = new Crankset("Force 1", "SRAM", tooths);
