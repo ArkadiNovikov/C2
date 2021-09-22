@@ -18,7 +18,7 @@
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-    
+
 	<dependencies>
 		<dependency>
 			<groupId>com.untitleddoc.cadencecalc</groupId>
@@ -70,7 +70,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.wicket</groupId>
-			<artifactId>wicket-cdi-1.1</artifactId>
+			<artifactId>wicket-cdi</artifactId>
 			<version>${wicket.version}</version>
 		</dependency>
 		<!--		<dependency>
@@ -161,7 +161,7 @@
 	<build>
 		<sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
 		<testSourceDirectory>${project.basedir}/src/kotlin/test</testSourceDirectory>
-		
+
 		<resources>
 			<resource>
 				<filtering>false</filtering>
@@ -196,7 +196,7 @@
 				</excludes>
 			</testResource>
 		</testResources>
-		
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -223,18 +223,18 @@
 				<executions>
 					<execution>
 						<id>compile</id>
-						<goals> 
-							<goal>compile</goal> 
+						<goals>
+							<goal>compile</goal>
 						</goals>
 					</execution>
 					<execution>
 						<id>test-compile</id>
-						<goals> 
-							<goal>test-compile</goal> 
+						<goals>
+							<goal>test-compile</goal>
 						</goals>
 					</execution>
 				</executions>
-			</plugin>			
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
