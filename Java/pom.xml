@@ -9,7 +9,7 @@
 	<properties>
 		<jetty.version>[11.0,)</jetty.version>
 		<wicket.version>[9.4,)</wicket.version>
-		<kotlin.version>1.5.30</kotlin.version>
+		<kotlin.version>1.6.0</kotlin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>13</maven.compiler.source>
 		<maven.compiler.target>13</maven.compiler.target>
