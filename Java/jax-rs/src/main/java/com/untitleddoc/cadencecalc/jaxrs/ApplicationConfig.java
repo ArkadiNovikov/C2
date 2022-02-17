@@ -31,6 +31,8 @@ public class ApplicationConfig extends Application
 	 */
 	private void addRestResourceClasses(Set<Class<?>> resources)
 	{
+		resources.add(com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider.class);
+		resources.add(com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider.class);
 		resources.add(com.untitleddoc.cadencecalc.jaxrs.CranksetService.class);
 		resources.add(com.untitleddoc.cadencecalc.jaxrs.PerimeterService.class);
 		resources.add(com.untitleddoc.cadencecalc.jaxrs.SproketService.class);

@@ -17,7 +17,7 @@ package com.untitleddoc.cadencecalc.web.wicket.client;
 
 import com.untitleddoc.cadencecalc.jaxrs.models.IC2Model;
 import java.util.List;
-import javax.ws.rs.ClientErrorException;
+import jakarta.ws.rs.ClientErrorException;
 
 /**
  *
