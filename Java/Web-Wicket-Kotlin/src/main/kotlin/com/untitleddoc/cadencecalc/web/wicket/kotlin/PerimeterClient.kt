@@ -6,9 +6,9 @@
 package com.untitleddoc.cadencecalc.web.wicket.kotlin
 
 import com.untitleddoc.cadencecalc.jaxrs.models.Perimeter
-import javax.ws.rs.client.Client
-import javax.ws.rs.client.WebTarget
-import javax.ws.rs.core.GenericType;
+import jakarta.ws.rs.client.Client
+import jakarta.ws.rs.client.WebTarget
+import jakarta.ws.rs.core.GenericType;
 
 /*
 
@@ -22,10 +22,10 @@ class PerimeterClient {
     private val BASE_URI = "http://localhost:8080/jax-rs-kotlin/webresources"
 
     constructor() {
-        client = javax.ws.rs.client.ClientBuilder.newClient()
+        client = jakarta.ws.rs.client.ClientBuilder.newClient()
         webTarget = client.target(BASE_URI).path("perimeter")
     }
 
-    public fun getPerimeter() = webTarget.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(object : GenericType<List<Perimeter>>() {})
+    public fun getPerimeter() = webTarget.request(jakarta.ws.rs.core.MediaType.APPLICATION_JSON).get(object : GenericType<List<Perimeter>>() {})
     public fun close() = client.close()
 }

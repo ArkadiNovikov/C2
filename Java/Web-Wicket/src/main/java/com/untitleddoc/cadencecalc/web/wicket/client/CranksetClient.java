@@ -17,10 +17,10 @@ package com.untitleddoc.cadencecalc.web.wicket.client;
 
 import com.untitleddoc.cadencecalc.jaxrs.models.Crankset;
 import java.util.List;
-import javax.ws.rs.ClientErrorException;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.GenericType;
+import jakarta.ws.rs.ClientErrorException;
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.WebTarget;
+import jakarta.ws.rs.core.GenericType;
 
 /**
  * Jersey REST client generated for REST resource:Crankset [crankset]<br>
@@ -41,14 +41,14 @@ public class CranksetClient implements IJaxrsClient {
     private static final String BASE_URI = "http://localhost:8080/jax-rs/webresources";
 
     public CranksetClient() {
-        client = javax.ws.rs.client.ClientBuilder.newClient();
+        client = jakarta.ws.rs.client.ClientBuilder.newClient();
         webTarget = client.target(BASE_URI).path("crankset");
     }
 
 	@Override
     public List<Crankset> get() throws ClientErrorException {
         final var resource = webTarget;
-        return resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(new GenericType<List<Crankset>>(){});
+        return resource.request(jakarta.ws.rs.core.MediaType.APPLICATION_JSON).get(new GenericType<List<Crankset>>(){});
     }
 
     public void close() {
