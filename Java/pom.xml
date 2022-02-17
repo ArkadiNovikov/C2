@@ -8,11 +8,11 @@
 	<packaging>pom</packaging>
 	<properties>
 		<jetty.version>[11.0,)</jetty.version>
-		<wicket.version>[9.4,)</wicket.version>
-		<kotlin.version>1.6.0</kotlin.version>
+		<wicket.version>[9.8,)</wicket.version>
+		<kotlin.version>1.6.10</kotlin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>13</maven.compiler.source>
-		<maven.compiler.target>13</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
 	<modules>
 		<module>Web-Wicket</module>
@@ -103,7 +103,7 @@
 			<dependency>
 				<groupId>com.google.flogger</groupId>
 				<artifactId>flogger</artifactId>
-				<version>0.7.1</version>
+				<version>0.7.4</version>
 			</dependency>
 			<dependency>
 				<groupId>com.google.flogger</groupId>
@@ -113,22 +113,22 @@
 			<dependency>
 				<groupId>com.google.flogger</groupId>
 				<artifactId>flogger-system-backend</artifactId>
-				<version>0.7.1</version>
+				<version>0.7.4</version>
 			</dependency>
 			<dependency>
 				<groupId>com.google.flogger</groupId>
 				<artifactId>flogger-slf4j-backend</artifactId>
-				<version>0.7.1</version>
+				<version>0.7.4</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
-				<version>1.7.32</version>
+				<version>1.7.35</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-nop</artifactId>
-				<version>1.7.32</version>
+				<version>1.7.35</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
@@ -138,27 +138,27 @@
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-jcl</artifactId>
-				<version>1.7.32</version>
+				<version>1.7.35</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>jcl-over-slf4j</artifactId>
-				<version>1.7.32</version>
+				<version>1.7.35</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>log4j-over-slf4j</artifactId>
-				<version>1.7.32</version>
+				<version>1.7.35</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>osgi-over-slf4j</artifactId>
-				<version>1.7.32</version>
+				<version>1.7.35</version>
 			</dependency>
 			<dependency>
 				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-classic</artifactId>
-				<version>1.2.7</version>
+				<version>1.2.10</version>
 			</dependency>
 			<!--  JUNIT DEPENDENCY FOR TESTING -->
 			<dependency>
