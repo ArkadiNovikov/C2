@@ -8,11 +8,11 @@
 	<packaging>pom</packaging>
 	<properties>
 		<jetty.version>[11.0,)</jetty.version>
-		<wicket.version>[9.8,)</wicket.version>
+		<wicket.version>[9.10,)</wicket.version>
 		<kotlin.version>1.7.0</kotlin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.source>18</maven.compiler.source>
+		<maven.compiler.target>18</maven.compiler.target>
 	</properties>
 	<modules>
 		<module>Web-Wicket</module>
