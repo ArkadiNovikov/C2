@@ -6,7 +6,7 @@
 package com.untitleddoc.cadencecalc.jaxrs.models;
 
 import java.io.Serializable;
-import javax.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

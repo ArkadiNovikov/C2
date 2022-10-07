@@ -8,7 +8,7 @@ package com.untitleddoc.cadencecalc.jaxrs.models;
 import com.google.common.collect.Lists;
 import java.io.Serializable;
 import java.util.List;
-import javax.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -24,7 +24,7 @@ public class Crankset implements Serializable, IC2Model {
     private static final long serialVersionUID = -6512261512456314356L;
 
     private String name;
-	private String manufacture;
+    private String manufacture;
     private List<Integer> tooths;
 
     public Crankset() {

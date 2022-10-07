@@ -5,13 +5,13 @@
 */
 package com.untitleddoc.cadencecalc.jaxrs.kotlin
 
-import javax.ws.rs.core.Application
+import jakarta.ws.rs.core.Application
 
 /**
  *
  * @author Novikov
  */
-@javax.ws.rs.ApplicationPath("webresources")
+@jakarta.ws.rs.ApplicationPath("webresources")
 class ApplicationConfig : Application() {
     @Override
     public override fun getClasses() : Set<Class<*>>

@@ -13,7 +13,7 @@ package com.untitleddoc.cadencecalc.jaxrs.models.kotlin
 
 import com.untitleddoc.cadencecalc.jaxrs.models.IC2Model
 import java.io.Serializable
-import javax.xml.bind.annotation.XmlRootElement
+import jakarta.xml.bind.annotation.XmlRootElement
 import kotlin.math.*
 
 @XmlRootElement
