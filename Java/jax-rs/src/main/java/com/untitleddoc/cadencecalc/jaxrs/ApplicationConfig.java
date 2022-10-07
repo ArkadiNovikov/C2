@@ -6,13 +6,13 @@
 package com.untitleddoc.cadencecalc.jaxrs;
 
 import java.util.Set;
-import javax.ws.rs.core.Application;
+import jakarta.ws.rs.core.Application;
 
 /**
  *
  * @author Novikov
  */
-@javax.ws.rs.ApplicationPath("webresources")
+@jakarta.ws.rs.ApplicationPath("webresources")
 public class ApplicationConfig extends Application
 {
 
@@ -31,8 +31,6 @@ public class ApplicationConfig extends Application
 	 */
 	private void addRestResourceClasses(Set<Class<?>> resources)
 	{
-		resources.add(com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider.class);
-		resources.add(com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider.class);
 		resources.add(com.untitleddoc.cadencecalc.jaxrs.CranksetService.class);
 		resources.add(com.untitleddoc.cadencecalc.jaxrs.PerimeterService.class);
 		resources.add(com.untitleddoc.cadencecalc.jaxrs.SproketService.class);
