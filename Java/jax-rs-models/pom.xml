@@ -9,8 +9,8 @@
 	<artifactId>jax-rs-models</artifactId>
 	<packaging>jar</packaging>
 	<properties>
-		<maven.compiler.source>18</maven.compiler.source>
-		<maven.compiler.target>18</maven.compiler.target>
+		<maven.compiler.source>20</maven.compiler.source>
+		<maven.compiler.target>20</maven.compiler.target>
 		<kotlin.compiler.incremental>true</kotlin.compiler.incremental>
 		<kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
 	</properties>
@@ -93,6 +93,7 @@
 					</execution>
 				</executions>
 				<configuration>
+			    	<encoding>UTF-8</encoding>
 					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
